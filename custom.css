@@ -13,8 +13,12 @@ main.content > .quarto-title-block.default {
   margin-bottom: 2.4rem;
 }
 
-/* "Now" panel on the home page — author with ::: {.now} ... ::: */
-.now {
+/* "Now" panel on the home page — author with ::: {.now} ... :::
+   Quarto/Pandoc wraps the dl in <div class="now">; apply the grid to
+   the inner <dl>. The `dl.now` fallback covers older Pandoc versions
+   that put the class directly on the dl. */
+.now > dl,
+dl.now {
   display: grid;
   grid-template-columns: 110px 1fr;
   row-gap: 0.6rem;
@@ -64,7 +68,8 @@ h2.rule {
   font-weight: 360;
 }
 
-/* CV-style definition lists */
+/* CV-style definition lists — same Pandoc-wrapper consideration as .now. */
+.cv > dl,
 dl.cv {
   display: grid;
   grid-template-columns: 110px 1fr;
@@ -73,7 +78,7 @@ dl.cv {
   align-items: baseline;
   margin: 0.4rem 0 0;
 }
-dl.cv dt {
+.cv dt {
   font-family: var(--bs-font-monospace, "JetBrains Mono", monospace);
   font-size: 0.68rem;
   letter-spacing: 0.06em;
@@ -81,15 +86,15 @@ dl.cv dt {
   color: var(--bs-secondary-color, #6B6557);
   padding-top: 0.25rem;
 }
-dl.cv dd {
+.cv dd {
   margin: 0;
   padding: 0.5rem 0;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);
   font-size: 0.97rem;
   line-height: 1.5;
 }
-[data-bs-theme="dark"] dl.cv dd,
-.quarto-dark dl.cv dd {
+[data-bs-theme="dark"] .cv dd,
+.quarto-dark .cv dd {
   border-bottom-color: rgba(255, 255, 255, 0.07);
 }
 
@@ -110,17 +115,17 @@ dl.cv dd {
 
 /* ── Responsive: stack the 110px label column on narrow phones ─────── */
 @media (max-width: 480px) {
-  .now,
-  dl.cv {
+  .now > dl, dl.now,
+  .cv > dl, dl.cv {
     grid-template-columns: 1fr;
     row-gap: 0.35rem;
     column-gap: 0;
   }
   .now dt,
-  dl.cv dt {
+  .cv dt {
     padding-top: 0.5rem;
   }
-  dl.cv dd {
+  .cv dd {
     padding-top: 0;
   }
 }

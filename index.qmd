@@ -9,7 +9,9 @@ include-in-header:
       <script src="assets/creatures.js" defer></script>
 listing:
   - id: recent-writing
-    contents: writing
+    contents:
+      - "writing/*.qmd"
+      - "!writing/index.qmd"
     type: default
     sort: "date desc"
     max-items: 4
@@ -47,19 +49,15 @@ Listening
 
 ## Selected work {.rule}
 
-::: {.cv-block}
+::: {.cv}
+
+2026
+:   **Evaluating Peer Fact-Checking on WhatsApp** \
+    Sudhamshu Hosamane, Kriti Sharma, Tanvi Goyal, Molly Offer-Westort, Kiran Garimella · *Proceedings of CHI ’26*
 
 2025
 :   **Hate Speech Campaigns in the 2016 Philippine Elections on Facebook** \
     Sudhamshu Hosamane, Kiran Garimella · *Proceedings of ICWSM ’25*
-
-2024
-:   **Navigating Hate Speech and Political Influence on Philippine Social Media** \
-    *Plenary talk* · International Conference on Computational Social Science (IC2S2), Philadelphia
-
-2024
-:   **Promoting Information Integrity in Minoritized Communities** \
-    *Panel* · Knight Media Forum, Miami
 :::
 
 [Full CV →](about.qmd){.eyebrow}

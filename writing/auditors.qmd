@@ -33,9 +33,8 @@ but a redistribution of legal exposure.
 
 ## The shape of an alternative
 
-I have written elsewhere about [procurement as a more promising
-site](procurement.qmd "[forthcoming]") for binding accountability. The short
-version: contracts have teeth that reports do not. A clause is enforceable;
-a finding is not.
+I have written elsewhere about procurement as a more promising site for
+binding accountability. The short version: contracts have teeth that
+reports do not. A clause is enforceable; a finding is not.
 
 *More to come.*

@@ -7,25 +7,32 @@ toc: false
 ---
 
 I am a PhD student at Rutgers University's School of Communication and
-Information, working with Kiran Garimella. My current project follows
-misinformation as it moves through private messaging platforms — encrypted,
-hard to instrument, and increasingly the dominant medium of political talk
-in much of the world. A second strand, supported by the Security, Trust &
-Safety Initiative at Cornell Tech, traces the organization of hate-speech
-campaigns through the 2016 Philippine elections on Facebook.
+Information, working with Kiran Garimella. My research follows misinformation
+as it moves through private messaging platforms — encrypted, hard to
+instrument, and increasingly the dominant medium of political talk in much
+of the world — alongside parallel strands on hate-speech campaigns in
+elections, peer fact-checking on WhatsApp, the accessibility of user-facing
+moderation tools, and the rules people write to govern their own online
+communities. Recent collaborations have taken me to the Max Planck Institute
+for Demographic Research, to Cornell Tech, and to the Security, Trust &
+Safety Initiative.
 
 Before Rutgers I read computational social science at the University of
 Chicago, where I worked with Molly Offer-Westort and Nick Feamster on
 adaptive field-experimental tools for correcting misperceptions on Indian
-WhatsApp. Earlier still I was an engineer — embedded firmware at Bosch, a
-brief turn co-founding a small water-monitoring startup, and an undergraduate
-stint on the BITS Pilani Hyperloop pod team.
+WhatsApp. Earlier still I was an engineer in Bangalore — firmware at
+Smarterhomes Technologies and Bosch Global Software.
 
 ## Positions {.rule}
 
 ::: {.cv}
-2023–
-:   Graduate Research Assistant — Rutgers University, School of Communication and Information
+2025–
+:   Research Collaborator — Max Planck Institute for Demographic Research \
+    with Carolina Coimbra Vieira and Emilio Zagheni
+
+2025–26
+:   Research Collaborator — Cornell Tech / Cornell University \
+    with Aditya Vashistha
 
 2022–23
 :   Graduate Research Assistant — Data Science Institute, University of Chicago
@@ -38,9 +45,6 @@ stint on the BITS Pilani Hyperloop pod team.
 
 2018–19
 :   Lead Firmware Engineer — Smarterhomes Technologies, Bangalore
-
-2017–18
-:   Co-Founder — Aquassure, Bangalore
 :::
 
 ## Education {.rule}
@@ -59,28 +63,43 @@ stint on the BITS Pilani Hyperloop pod team.
 
 2014–18
 :   BEng, Electronics and Instrumentation Engineering — BITS Pilani \
-    Thesis: *Building a versatile multi-3G/4G platform for real-time mobile applications* · Advisor: Malati Hegde (IISc)
+    Thesis: *A multi-3G/4G platform for real-time mobile applications* · Advisor: Malati Hegde (IISc)
 :::
 
 ## Selected publications {.rule}
 
 ::: {.cv}
+2026
+:   **Evaluating Peer Fact-Checking on WhatsApp** \
+    Sudhamshu Hosamane, Kriti Sharma, Tanvi Goyal, Molly Offer-Westort, Kiran Garimella · *Proceedings of CHI ’26* · [preprint](https://rutgers.box.com/v/PeerFactCheck)
+
 2025
 :   **Hate Speech Campaigns in the 2016 Philippine Elections on Facebook** \
-    Sudhamshu Hosamane, Kiran Garimella · *Proceedings of the International AAAI Conference on Web and Social Media (ICWSM ’25)*
+    Sudhamshu Hosamane, Kiran Garimella · *Proceedings of ICWSM ’25*
+
+2025
+:   **A Critical Examination of the Accessibility of User-Enacted Moderation Tools on Facebook and X** \
+    Sudhamshu Hosamane, Alyvia Walters, Yao Lyu, Shagun Jhaver · *Preprint* · [pdf](https://rutgers.box.com/v/FBaccessibility)
+
+2025
+:   **Examining LLM-Assisted Rule Creation in WhatsApp Groups** \
+    Sudhamshu Hosamane, Farhana Shahid, Kiran Garimella, Aditya Vashistha · *Preprint* · [pdf](https://rutgers.box.com/v/WhatsAppRules)
 :::
 
 ## Selected talks {.rule}
 
 ::: {.cv}
+2025
+:   *A Critical Examination of the Accessibility of User-Enacted Moderation Tools on Facebook and X* — Lunch Seminar, **Google Research NYC**
+
+2025
+:   *Evaluating Peer Fact-Checking on WhatsApp* — **Yale FDS Workshop: New Directions in Social Algorithms Research**
+
 2024
 :   *Navigating Hate Speech and Political Influence on Philippine Social Media* — Security, Trust & Safety Initiative Lunch Seminar, **Cornell Tech**
 
 2024
 :   *Navigating Hate Speech and Political Influence on Philippine Social Media* — Plenary, **IC2S2**, Philadelphia
-
-2024
-:   *Promoting Information Integrity in Minoritized Communities* — Panel, **Knight Media Forum**, Miami
 
 2024
 :   *Navigating Hate Speech and Political Influence on Philippine Social Media* — **Rutgers Conference for Rising Stars in Graduate Research**, New Brunswick
@@ -90,7 +109,7 @@ stint on the BITS Pilani Hyperloop pod team.
 
 ::: {.cv}
 2025
-:   Security, Trust & Safety Initiative Fellowship Grant — Cornell Tech
+:   Security, Trust & Safety Initiative Fellowship — Cornell Tech
 
 2023–24
 :   Graduate Fellowship — Rutgers University
@@ -102,24 +121,17 @@ stint on the BITS Pilani Hyperloop pod team.
 :   Maroon Scholarship — University of Chicago
 :::
 
-## Teaching {.rule}
-
-::: {.cv}
-Spring 2017
-:   Microprocessor Programming and Interfacing — BITS Pilani (labs & grading)
-:::
-
 ## Service {.rule}
 
 ::: {.cv}
 2024
 :   Program Committee — International Workshop on Cyber Social Threats (CySoc)
 
-2024
-:   Reviewer — ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW)
-
-2022–23
-:   Reviewer — International Conference on Computational Social Science (IC2S2)
+Reviewer
+:   ACM CHI Conference on Human Factors in Computing Systems · 2025 \
+    PNAS Nexus · ICWSM · 2024, 2026 \
+    ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW) · 2024 \
+    International Conference on Computational Social Science (IC2S2) · 2022, 2023, 2024, 2026
 :::
 
 ## Contact {.rule}
