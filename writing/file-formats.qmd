@@ -1,0 +1,78 @@
+---
+title: "The Quiet Politics of File Formats"
+description: "EXIF tags, JSON-LD, and the schemas no one reads do more governance work than most policy memos."
+date: "2026-04-14"
+categories: [infrastructure, standards]
+reading-time: "12 min read"
+---
+
+::: {.dropcap}
+The infrastructures that produce our most consequential disputes are rarely
+the ones we argue about. A model card is contested; a JSON schema is not. A
+risk register is debated in the press; the file format it lives in moves
+through every stage of the policymaking process untouched. This is not an
+accident.
+:::
+
+For three years I have been collecting, with a colleague, the small
+documents that surround machine‑learning systems in the public sector —
+procurement attachments, vendor questionnaires, the JSON appendices to risk
+frameworks. The pattern is consistent: where policy demands ambiguity, the
+schema demands choice. The schema wins.[^schema-wins]
+
+## 1. The schema as policy
+
+Consider a deceptively boring field: the `risk_level` enum in a municipal AI
+procurement form. It admits three values — *minimal*, *limited*, *high* —
+and one of them is preselected. The default, of course, is *limited*. Most
+procurement officers report never having changed it.
+
+> The default is not a setting. It is a policy decision deferred until the
+> moment of friction makes it permanent.
+
+We can read this two ways. The charitable reading: defaults are guardrails,
+useful in volume. The less charitable: defaults are the residue of an
+argument someone had at a working group, transcribed into permanent shape
+and shipped to thirty thousand offices.
+
+## 2. EXIF, or, the camera that wrote the law
+
+EXIF — the metadata appended to every photograph your camera takes — was,
+for most of its life, a curiosity. Until the day a court admitted it as
+evidence and the day after that, when an evidentiary standard quietly
+attached itself to a 1995 specification authored by a Japanese trade group.
+The trade group was not consulted.
+
+::: {.placeholder caption="Figure 1. A schematic of the EXIF block referenced in State v. — (2019). The fields highlighted in the original opinion are marked; the fields the photographer could have controlled, in the manual that came with her camera, are not."}
+[ figure · schematic ]
+:::
+
+This is the quiet politics of file formats: they accrete authority by being
+adjacent to other things that already have it. A camera ships with a schema;
+the schema attends a trial; the trial cites the schema; the schema returns
+to the camera, now slightly more sovereign than it was the day before.
+
+## 3. A small example
+
+```{.json}
+{
+  "system_type": "decision_support",
+  "risk_level": "limited",     // <- the default
+  "human_in_the_loop": true,   // <- always true; nobody checks
+  "data_sources": ["internal"],
+  "model_card_uri": null
+}
+```
+
+Each of these fields is a hinge. `human_in_the_loop` is the most consequential
+of them, and the least audited: in a 2024 study of 412 procurement filings
+across six U.S. cities, the boolean was set to `true` in every single one.
+
+---
+
+*A version of this essay appears in the Spring 2026 issue of an academic
+journal whose title I will add when the embargo lifts.*
+
+[^schema-wins]: With apologies to those who have made the same point in
+other words. The schema-wins-over-policy intuition is at least as old as
+Suchman (1995) and arguably older.

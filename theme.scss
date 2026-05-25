@@ -1,0 +1,459 @@
+/*-- scss:defaults --*/
+
+// ──────────────────────────────────────────────────────────────────────
+// Researcher portfolio — LIGHT theme
+//
+// Editorial minimal. Warm off-white paper, near-black ink, single muted
+// ink-blue accent. Newsreader (serif) + Inter Tight (sans) + JetBrains Mono.
+//
+// This file overrides Bootstrap defaults via Quarto's /*-- scss:defaults --*/
+// block. Custom rules go below the marker.
+// ──────────────────────────────────────────────────────────────────────
+
+// ── Color tokens ──────────────────────────────────────────────────────
+$paper:        #FAF7F2;
+$ink:          #0D0B07;
+$muted:        #6B6557;
+$rule:         rgba(26, 24, 20, 0.14);
+$rule-soft:    rgba(26, 24, 20, 0.07);
+$accent:       #2A4D6E;     // ink-blue
+$accent-soft:  rgba(42, 77, 110, 0.08);
+
+// Map onto Bootstrap variables
+$body-bg:           $paper;
+$body-color:        $ink;
+$link-color:        $ink;
+$link-hover-color:  $accent;
+$link-decoration:   none;
+
+$border-color:      $rule;
+$border-radius:     2px;
+$border-radius-sm:  2px;
+$border-radius-lg:  4px;
+
+$gray-100:  #F4F1EC;
+$gray-200:  #ECE7DE;
+$gray-300:  #DDD7CB;
+$gray-400:  #BFB8A8;
+$gray-500:  $muted;
+$gray-600:  #4F4A40;
+$gray-700:  #322F28;
+$gray-800:  #232019;
+$gray-900:  $ink;
+
+// Code
+$code-color:        $accent;
+$code-bg:           $accent-soft;
+$pre-bg:            $gray-100;
+
+// ── Typography ────────────────────────────────────────────────────────
+$font-family-serif:      "Newsreader", Georgia, "Times New Roman", serif;
+$font-family-sans-serif: "Inter Tight", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace:  "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+$font-family-base:       $font-family-sans-serif;
+
+$headings-font-family:   $font-family-serif;
+$headings-font-weight:   380;
+$headings-line-height:   1.12;
+$headings-color:         $ink;
+
+$h1-font-size:           clamp(2.2rem, 4.5vw, 3.1rem);
+$h2-font-size:           1.55rem;
+$h3-font-size:           1.22rem;
+$h4-font-size:           1.05rem;
+
+$lead-font-size:         1.3rem;
+$lead-font-weight:       400;
+
+$font-size-base:         1rem;
+$line-height-base:       1.62;
+
+$small-font-size:        0.86em;
+
+// Bootstrap navbar tokens
+$navbar-light-color:           $muted;
+$navbar-light-hover-color:     $ink;
+$navbar-light-active-color:    $accent;
+$navbar-light-brand-color:     $ink;
+$navbar-padding-y:             0.95rem;
+
+// Tables
+$table-color:                  $ink;
+$table-border-color:           $rule-soft;
+$table-striped-bg:             rgba(0, 0, 0, 0.02);
+
+// Quarto-specific
+$content-padding-top:          1rem;
+$body-color-dim:               $muted;
+$footer-bg:                    $paper;
+$footer-fg:                    $muted;
+
+/*-- scss:mixins --*/
+
+@mixin mono-label {
+  font-family: $font-family-monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $muted;
+}
+
+/*-- scss:rules --*/
+
+// Expose two theme tokens as CSS custom properties so vanilla CSS/JS
+// (e.g. assets/creatures.css) can reference them and adapt to dark mode.
+:root {
+  --ink:    #{$ink};
+  --accent: #{$accent};
+}
+
+// ── Page chrome ──────────────────────────────────────────────────────
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+}
+
+::selection { background: $accent; color: $paper; }
+
+// Navbar: flat, editorial. No shadow, hairline border at the bottom.
+.navbar {
+  border-bottom: 0.5px solid $rule;
+  box-shadow: none !important;
+  background: rgba($paper, 0.88) !important;
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+
+  .navbar-brand,
+  .navbar-title {
+    font-family: $font-family-serif;
+    font-weight: 500;
+    color: $ink;
+    padding: 0;
+    margin-right: 0.6rem;
+  }
+  .navbar-brand img,
+  .navbar-logo {
+    width: 52px;
+    height: auto;
+    display: block;
+  }
+  .nav-link {
+    @include mono-label;
+    padding: 0.25rem 0 !important;
+    margin: 0 0.7rem;
+    border-bottom: 0.5px solid transparent;
+  }
+  .nav-link:hover { color: $ink; }
+  .nav-link.active {
+    color: $ink;
+    border-bottom-color: $accent;
+  }
+}
+
+// ── Type ─────────────────────────────────────────────────────────────
+h1, .h1 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin-top: 0;
+}
+h2, .h2 {
+  font-weight: 420;
+  letter-spacing: -0.01em;
+  margin-top: 2.4rem;
+}
+h3, .h3 {
+  font-weight: 480;
+  letter-spacing: -0.005em;
+  margin-top: 1.8rem;
+}
+
+p, li { text-wrap: pretty; }
+
+em, i { font-style: italic; }
+
+// Lead paragraph (Quarto's .lead / .subtitle)
+.subtitle, p.lead, .quarto-title .subtitle {
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.45;
+  color: $muted;
+  font-weight: 400;
+  margin-top: 0.6rem;
+}
+
+// ── Quarto title block ───────────────────────────────────────────────
+.quarto-title-block {
+  border-bottom: 0.5px solid $rule;
+  padding-bottom: 1.6rem;
+  margin-bottom: 2.2rem;
+}
+.quarto-title-meta {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  row-gap: 6px;
+  column-gap: 1.1rem;
+  margin-top: 1rem;
+  font-size: 0.92rem;
+}
+.quarto-title-meta-heading {
+  @include mono-label;
+  padding-top: 3px;
+}
+.quarto-title-meta-contents { color: $ink; }
+
+// ── Pre-title metadata strip (mono date · reading time · tags) ───────
+.quarto-title .description {
+  @include mono-label;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+// ── Inline code / pre ────────────────────────────────────────────────
+code {
+  font-family: $font-family-monospace;
+  font-size: 0.86em;
+  padding: 1px 6px;
+  background: $accent-soft;
+  color: $accent;
+  border-radius: 4px;
+}
+pre {
+  border: 0.5px solid $rule;
+  background: $gray-100;
+  padding: 1rem 1.1rem;
+  border-radius: 3px;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  code {
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    border-radius: 0;
+  }
+}
+div.sourceCode {
+  border-radius: 3px;
+  background: $gray-100;
+  margin: 1.4rem 0;
+}
+
+// ── Blockquotes / pull quotes ────────────────────────────────────────
+blockquote {
+  margin: 2rem 0;
+  padding: 0 0 0 1.4rem;
+  border-left: 2px solid $accent;
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: 1.34rem;
+  line-height: 1.45;
+  color: $ink;
+  text-wrap: pretty;
+  p { margin-bottom: 0.4rem; }
+}
+
+// Pull-quote variant (use ::: {.pullquote} ... ::: in .qmd)
+.pullquote {
+  margin: 2rem 0;
+  padding: 0 0 0 1.4rem;
+  border-left: 2px solid $accent;
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.45;
+}
+
+// ── Figures ──────────────────────────────────────────────────────────
+figure.figure, .quarto-figure {
+  margin: 2rem 0;
+  img { border-radius: 2px; border: 0.5px solid $rule; }
+}
+.figure-caption, figcaption {
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: $muted;
+  line-height: 1.5;
+  margin-top: 0.6rem;
+}
+
+// ── Footnotes ────────────────────────────────────────────────────────
+a.footnote-ref {
+  font-family: $font-family-monospace;
+  font-size: 0.7rem;
+  color: $accent;
+  text-decoration: none;
+  padding: 0 1px;
+}
+.footnotes {
+  margin-top: 3.2rem;
+  padding-top: 1rem;
+  border-top: 0.5px solid $rule;
+  font-size: 0.88rem;
+  color: $muted;
+  line-height: 1.55;
+  ol { padding-left: 1.2rem; }
+}
+
+// ── Tables ───────────────────────────────────────────────────────────
+table.table {
+  font-size: 0.95rem;
+  th {
+    @include mono-label;
+    border-bottom: 0.5px solid $rule;
+    padding: 0.6rem 0.8rem 0.6rem 0;
+  }
+  td {
+    border-bottom: 0.5px solid $rule-soft;
+    padding: 0.55rem 0.8rem 0.55rem 0;
+  }
+}
+
+// ── Listings (writing index) ─────────────────────────────────────────
+.quarto-listing {
+  margin-top: 1rem;
+}
+.quarto-listing .listing-grid,
+.quarto-listing .listing-table { gap: 0; }
+
+.listing-item, .quarto-post {
+  display: block;
+  padding: 1.3rem 0;
+  border-bottom: 0.5px solid $rule-soft;
+
+  .listing-date, .listing-reading-time {
+    @include mono-label;
+  }
+  .metadata {
+    display: flex;
+    gap: 0.9rem;
+    align-items: baseline;
+    margin-bottom: 0.35rem;
+  }
+  .listing-title, h3.listing-title {
+    font-family: $font-family-serif;
+    font-weight: 400;
+    font-size: 1.38rem;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    margin: 0.1rem 0 0.35rem;
+    text-wrap: pretty;
+    a { color: $ink; }
+  }
+  .listing-description, .description {
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: $muted;
+    line-height: 1.5;
+    max-width: 34rem;
+    text-wrap: pretty;
+  }
+  .listing-categories {
+    margin-top: 0.6rem;
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .listing-category {
+    @include mono-label;
+    font-size: 0.62rem;
+    padding: 2px 7px;
+    border: 0.5px solid $rule;
+    border-radius: 999px;
+    background: transparent;
+    color: $muted;
+  }
+}
+
+// Group headers in listings (by year)
+.quarto-listing .quarto-listing-category-title,
+.quarto-listing h2 {
+  @include mono-label;
+  font-family: $font-family-monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-top: 2.4rem;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.5px solid $rule;
+}
+
+// ── Sidebar TOC ──────────────────────────────────────────────────────
+#TOC, .sidebar-section, #quarto-margin-sidebar {
+  font-family: $font-family-monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+}
+#TOC .toc-active a,
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  color: $accent !important;
+  font-weight: 500;
+  border-left-color: $accent !important;
+}
+.sidebar nav[role="doc-toc"] ul > li > a {
+  color: $muted;
+  border-left: 1px solid $rule-soft;
+  padding-left: 0.7rem;
+}
+.sidebar nav[role="doc-toc"] ul > li > a:hover { color: $ink; }
+
+// Section header above TOC ("On this page")
+.sidebar nav[role="doc-toc"] > h2,
+.sidebar-section-title {
+  @include mono-label;
+  margin-bottom: 0.7rem;
+}
+
+// ── Page width container ─────────────────────────────────────────────
+.page-columns {
+  grid-template-columns:
+    [screen-start] 1.5em
+    [screen-start-inset] 5fr
+    [page-start page-start-inset body-start-outset]
+    minmax(1em, 1fr)
+    [body-start]
+    minmax(0, var(--bs-body-width, 640px))
+    [body-end]
+    minmax(1em, 1fr)
+    [body-end-outset]
+    minmax(0, 220px)
+    [page-end-inset page-end]
+    5fr [screen-end-inset]
+    1.5em [screen-end];
+}
+
+// ── Footer ───────────────────────────────────────────────────────────
+.nav-footer, .page-footer {
+  @include mono-label;
+  border-top: 0.5px solid $rule;
+  background: $paper;
+  padding: 1.6rem 1.2rem 2.2rem !important;
+  margin-top: 3rem;
+  a { color: $muted; border-bottom: 0.5px dotted $rule; }
+  a:hover { color: $ink; }
+}
+
+// ── Anchor section markers ───────────────────────────────────────────
+.anchorjs-link {
+  font-family: $font-family-monospace;
+  color: $muted;
+  opacity: 0;
+  transition: opacity .15s;
+}
+:is(h1, h2, h3, h4):hover .anchorjs-link { opacity: 0.55; }
+
+// ── Hairlines + small details ────────────────────────────────────────
+hr { border: 0; border-top: 0.5px solid $rule; margin: 2.4rem 0; }
+
+.quarto-section-identifier { display: none; } // suppress section numbers
+
+// Cite block (uses Quarto's hover citations)
+.csl-entry {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  padding-left: 1rem;
+  text-indent: -1rem;
+  margin-bottom: 0.55rem;
+}

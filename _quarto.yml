@@ -1,0 +1,98 @@
+# ──────────────────────────────────────────────────────────────────────
+# Researcher portfolio — Quarto site config
+#
+# Drop this folder into a Quarto-ready environment and run:
+#   quarto preview
+#   quarto render
+#
+# Quarto >= 1.4 recommended.
+# ──────────────────────────────────────────────────────────────────────
+
+project:
+  type: website
+  output-dir: _site
+  preview:
+    port: 4200
+    browser: false
+  # Files that aren't referenced from a .qmd but still need to ship.
+  resources:
+    - "assets/logo-duo.svg"
+    - "CNAME"          # custom-domain marker for GitHub Pages
+
+website:
+  title: "Sudhamshu Hosamane"
+  description: "Doctoral researcher — misinformation, platforms, political communication"
+  site-url: "https://sudhamshu.info"
+  favicon: "assets/favicon.svg"
+  open-graph: true
+  twitter-card:
+    creator: "@theSudhamshow"
+
+  navbar:
+    pinned: false
+    background: light
+    foreground: dark
+    # Primary mark = Friends Trio (two humans + one robot).
+    # Swap to assets/logo-duo.svg for the simpler Friends Duo (two humans only).
+    logo: "assets/logo.svg"
+    logo-alt: "Home"
+    title: false
+    left:
+      - text: "Index"
+        href: index.qmd
+      - text: "Writing"
+        href: writing/index.qmd
+      - text: "About / CV"
+        href: about.qmd
+    right:
+      - icon: rss
+        href: writing/index.xml
+      - icon: twitter
+        href: "https://twitter.com/theSudhamshow"
+        aria-label: "Twitter"
+      - icon: github
+        href: "https://github.com/sudhamshow"
+        aria-label: "GitHub"
+
+  page-footer:
+    border: false
+    left: "© 2026 Sudhamshu Hosamane · CC BY-NC 4.0"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    # Theme: light + dark, both custom SCSS. Quarto compiles these on top
+    # of its default Bootstrap layer; we replace Bootstrap tokens via
+    # /*-- scss:defaults --*/ blocks.
+    theme:
+      light: [cosmo, theme.scss]
+      dark:  [cosmo, theme.scss, theme-dark.scss]
+    css: custom.css
+    toc: false
+    toc-location: right-body
+    toc-depth: 2
+    fontsize: 16.5px
+    linestretch: 1.62
+    code-overflow: wrap
+    code-link: false
+    citations-hover: true
+    footnotes-hover: true
+    smooth-scroll: true
+    anchor-sections: true
+    grid:
+      sidebar-width: 220px
+      body-width: 640px
+      margin-width: 220px
+      gutter-width: 1.4rem
+    # Custom title-block template — see partials/title-block.html.
+    # Use the default if you'd rather not maintain a partial.
+    template-partials:
+      - partials/title-block.html
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Inter+Tight:wght@300..700&family=JetBrains+Mono:wght@300..600&display=swap" rel="stylesheet">
+
+execute:
+  freeze: auto

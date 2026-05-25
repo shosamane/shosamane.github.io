@@ -1,0 +1,139 @@
+---
+title: "About"
+subtitle: "Doctoral researcher, sometime field-experimenter, occasional engineer. Working at the seam between computational social science and the platforms that organize public life."
+eyebrow: "About / CV"
+page-layout: article
+toc: false
+---
+
+I am a PhD student at Rutgers University's School of Communication and
+Information, working with Kiran Garimella. My current project follows
+misinformation as it moves through private messaging platforms — encrypted,
+hard to instrument, and increasingly the dominant medium of political talk
+in much of the world. A second strand, supported by the Security, Trust &
+Safety Initiative at Cornell Tech, traces the organization of hate-speech
+campaigns through the 2016 Philippine elections on Facebook.
+
+Before Rutgers I read computational social science at the University of
+Chicago, where I worked with Molly Offer-Westort and Nick Feamster on
+adaptive field-experimental tools for correcting misperceptions on Indian
+WhatsApp. Earlier still I was an engineer — embedded firmware at Bosch, a
+brief turn co-founding a small water-monitoring startup, and an undergraduate
+stint on the BITS Pilani Hyperloop pod team.
+
+## Positions {.rule}
+
+::: {.cv}
+2023–
+:   Graduate Research Assistant — Rutgers University, School of Communication and Information
+
+2022–23
+:   Graduate Research Assistant — Data Science Institute, University of Chicago
+
+2022
+:   Summer Fellow — Chicago Summer of eXistential Risk, University of Chicago
+
+2019–21
+:   Senior Software Engineer — Bosch Global Software Technologies, Bangalore
+
+2018–19
+:   Lead Firmware Engineer — Smarterhomes Technologies, Bangalore
+
+2017–18
+:   Co-Founder — Aquassure, Bangalore
+:::
+
+## Education {.rule}
+
+::: {.cv}
+2023–
+:   PhD, Information Science — Rutgers University \
+    Advisor: Kiran Garimella
+
+2024–
+:   MS, Statistics — Rutgers University
+
+2021–23
+:   MA, Computational Social Science — University of Chicago \
+    Thesis: *Correcting Misperceptions on Indian WhatsApp with Experimental Adaptation* · Advisor: Molly Offer-Westort
+
+2014–18
+:   BEng, Electronics and Instrumentation Engineering — BITS Pilani \
+    Thesis: *Building a versatile multi-3G/4G platform for real-time mobile applications* · Advisor: Malati Hegde (IISc)
+:::
+
+## Selected publications {.rule}
+
+::: {.cv}
+2025
+:   **Hate Speech Campaigns in the 2016 Philippine Elections on Facebook** \
+    Sudhamshu Hosamane, Kiran Garimella · *Proceedings of the International AAAI Conference on Web and Social Media (ICWSM ’25)*
+:::
+
+## Selected talks {.rule}
+
+::: {.cv}
+2024
+:   *Navigating Hate Speech and Political Influence on Philippine Social Media* — Security, Trust & Safety Initiative Lunch Seminar, **Cornell Tech**
+
+2024
+:   *Navigating Hate Speech and Political Influence on Philippine Social Media* — Plenary, **IC2S2**, Philadelphia
+
+2024
+:   *Promoting Information Integrity in Minoritized Communities* — Panel, **Knight Media Forum**, Miami
+
+2024
+:   *Navigating Hate Speech and Political Influence on Philippine Social Media* — **Rutgers Conference for Rising Stars in Graduate Research**, New Brunswick
+:::
+
+## Honors & fellowships {.rule}
+
+::: {.cv}
+2025
+:   Security, Trust & Safety Initiative Fellowship Grant — Cornell Tech
+
+2023–24
+:   Graduate Fellowship — Rutgers University
+
+2022
+:   Chicago Summer of eXistential Risk Fellowship Grant
+
+2021–23
+:   Maroon Scholarship — University of Chicago
+:::
+
+## Teaching {.rule}
+
+::: {.cv}
+Spring 2017
+:   Microprocessor Programming and Interfacing — BITS Pilani (labs & grading)
+:::
+
+## Service {.rule}
+
+::: {.cv}
+2024
+:   Program Committee — International Workshop on Cyber Social Threats (CySoc)
+
+2024
+:   Reviewer — ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW)
+
+2022–23
+:   Reviewer — International Conference on Computational Social Science (IC2S2)
+:::
+
+## Contact {.rule}
+
+::: {.cv}
+Email
+:   [sh1779@rutgers.edu](mailto:sh1779@rutgers.edu)
+
+LinkedIn
+:   [in/sudhamshu-m-hosamane](https://www.linkedin.com/in/sudhamshu-m-hosamane/)
+
+GitHub
+:   [sudhamshow](https://github.com/sudhamshow)
+
+Twitter
+:   [\@theSudhamshow](https://twitter.com/theSudhamshow)
+:::

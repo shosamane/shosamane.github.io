@@ -1,0 +1,64 @@
+/*-- scss:defaults --*/
+
+// ──────────────────────────────────────────────────────────────────────
+// Researcher portfolio — DARK theme overrides
+//
+// Applied on top of theme.scss when Quarto's brightness toggle is "dark".
+// Only the color tokens change — type, spacing, and structure stay.
+// ──────────────────────────────────────────────────────────────────────
+
+$paper:        #14130F;
+$ink:          #F8F4E8;
+$muted:        #8E887A;
+$rule:         rgba(236, 231, 220, 0.13);
+$rule-soft:    rgba(236, 231, 220, 0.06);
+$accent:       #84ACD2;     // lifted ink-blue, calibrated for dark bg
+$accent-soft:  rgba(132, 172, 210, 0.12);
+
+$body-bg:           $paper;
+$body-color:        $ink;
+$link-color:        $ink;
+$link-hover-color:  $accent;
+
+$border-color:      $rule;
+
+$gray-100:  #1B1A15;
+$gray-200:  #232118;
+$gray-300:  #2A271D;
+$gray-400:  #3A372D;
+$gray-500:  $muted;
+$gray-600:  #B0AB9D;
+$gray-700:  #D2CDC0;
+$gray-800:  #E4DFD2;
+$gray-900:  $ink;
+
+$code-color:    $accent;
+$code-bg:       $accent-soft;
+$pre-bg:        $gray-100;
+
+$navbar-light-color:        $muted;
+$navbar-light-hover-color:  $ink;
+$navbar-light-active-color: $accent;
+$navbar-light-brand-color:  $ink;
+
+$table-color:           $ink;
+$table-border-color:    $rule-soft;
+$table-striped-bg:      rgba(255, 255, 255, 0.02);
+
+/*-- scss:rules --*/
+
+:root {
+  --ink:    #{$ink};
+  --accent: #{$accent};
+}
+
+.navbar {
+  background: rgba(20, 19, 15, 0.85) !important;
+}
+
+pre, div.sourceCode {
+  background: $gray-100;
+  border-color: $rule;
+}
+
+::selection { background: $accent; color: $paper; }

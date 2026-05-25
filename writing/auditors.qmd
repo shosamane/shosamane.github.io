@@ -1,0 +1,41 @@
+---
+title: "Auditors Without Power"
+description: "Why the audit has become the dominant aesthetic of AI accountability — and what that obscures."
+date: "2026-02-02"
+categories: [audit, governance]
+reading-time: "9 min read"
+---
+
+The audit, as currently practiced in algorithmic accountability, is doing a
+great deal of cultural work. It is rarely, in any meaningful sense, doing
+governance work.
+
+This is not a complaint about the people who perform audits. The auditors
+I have spent time with are conscientious, technically skilled, and clear
+about what their reports can and cannot say. The problem is structural.
+We have built an audit *aesthetic* without building the institutional
+machinery that historically gave audits force in finance, in medicine, in
+aviation: tenure, indemnity, subpoena, and a regulator on the other end
+willing to act.
+
+## What audit reports actually do
+
+In the absence of that machinery, an audit report does three things. It
+records. It performs. It defers. It very rarely *binds*.
+
+> Compliance is a performance, and the report is its script.
+
+This is not new. The accounting scandals of the early 2000s ran on the same
+substrate: an industry full of careful professionals, producing competent
+reports, with no consequences attached to the reports themselves. The
+remedy, eventually, was Sarbanes‑Oxley — not a better template for audits,
+but a redistribution of legal exposure.
+
+## The shape of an alternative
+
+I have written elsewhere about [procurement as a more promising
+site](procurement.qmd "[forthcoming]") for binding accountability. The short
+version: contracts have teeth that reports do not. A clause is enforceable;
+a finding is not.
+
+*More to come.*

@@ -1,0 +1,50 @@
+$-- ────────────────────────────────────────────────────────────────────$
+$-- Researcher portfolio — custom title block (Pandoc template partial)$
+$--$
+$-- Renders an editorial article header:                                $
+$--   [MONO EYEBROW · date · reading time]                              $
+$--   Title (serif, balanced)                                           $
+$--   Italic subtitle / dek                                             $
+$--   Hairline rule                                                     $
+$--                                                                      $
+$-- Override or remove this partial by editing _quarto.yml.             $
+$-- ────────────────────────────────────────────────────────────────────$
+<header id="title-block-header" class="quarto-title-block default">
+  <div class="quarto-title">
+    $if(category)$
+      <div class="eyebrow">$for(category)$$category$$sep$ · $endfor$</div>
+    $else$
+      $if(eyebrow)$<div class="eyebrow">$eyebrow$</div>$endif$
+    $endif$
+
+    <h1 class="title">$title$</h1>
+
+    $if(subtitle)$
+      <p class="subtitle lead">$subtitle$</p>
+    $endif$
+
+    $if(date)$
+      <div class="quarto-title-meta">
+        <div class="quarto-title-meta-heading">Published</div>
+        <div class="quarto-title-meta-contents">$date$</div>
+
+        $if(reading-time)$
+          <div class="quarto-title-meta-heading">Reading</div>
+          <div class="quarto-title-meta-contents">$reading-time$</div>
+        $endif$
+
+        $if(author)$
+          <div class="quarto-title-meta-heading">By</div>
+          <div class="quarto-title-meta-contents">
+            $for(author)$$author.name$$sep$, $endfor$
+          </div>
+        $endif$
+
+        $if(doi)$
+          <div class="quarto-title-meta-heading">DOI</div>
+          <div class="quarto-title-meta-contents"><a href="https://doi.org/$doi$">$doi$</a></div>
+        $endif$
+      </div>
+    $endif$
+  </div>
+</header>

@@ -1,0 +1,26 @@
+---
+title: "On the Disappearance of the Default"
+description: "A short note on the politics of preselected options, and the long shadow they cast on consent."
+date: "2026-01-09"
+categories: [notes]
+reading-time: "6 min read"
+---
+
+There is a small literature on defaults — most of it within behavioral
+economics, framed in the cheerful vocabulary of "nudges." That framing was
+useful, once. It is no longer enough.
+
+A default is not a small thing. A default is the option you accept by not
+acting. In a system that asks for action at scale, defaults *are* the
+system. They are the answer the system gives when its users are tired,
+unconfident, or absent.
+
+::: {.callout-note}
+This is a short field note, not a finished argument. I am writing it down
+because I keep losing the thread when I try to discuss it out loud, and
+that is usually a sign the thread is worth holding on to.
+:::
+
+The political question is not "is the default *good*?" but "*who* chose
+it, and *how would anyone know*?" The honest answer in most contemporary
+software is: nobody can tell, and the people who chose it have moved teams.

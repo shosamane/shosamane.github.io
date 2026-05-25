@@ -1,0 +1,6 @@
+_site/
+.quarto/
+*.html.lock
+.DS_Store
+
+/.quarto/

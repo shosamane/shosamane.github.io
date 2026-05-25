@@ -1,0 +1,285 @@
+/* ──────────────────────────────────────────────────────────────────────
+   creatures.css — Walking figures + choreographed scenarios.
+   Paired with creatures.js. Loaded only on index.qmd via its
+   `include-in-header` block.
+
+   The CSS is hand-portable from the prototype's creatures.jsx CSS — the
+   selectors, animations, and timing are identical so the Quarto site
+   feels the same as the editor preview.
+   ────────────────────────────────────────────────────────────────────── */
+
+.creatures-layer {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 0;
+  overflow: hidden;
+  /* Drives walker / bubble sizing across breakpoints. */
+  --walker-scale: 1;
+}
+
+/* Lift Quarto's content above the creatures layer. The navbar is
+   already above (Bootstrap .fixed-top sets z-index: 1030) and the
+   page background is painted by body, so leave both untouched. */
+#quarto-content,
+#quarto-document-content,
+#quarto-margin-sidebar,
+main.content,
+footer.footer,
+.nav-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Base walker (background + scenario share these tokens) ─────────── */
+.walker {
+  position: absolute; left: 0;
+  width: var(--w, 18px); height: var(--h, 30px);
+  color: var(--ink, #0D0B07);
+}
+/* Promote only the continuously-animating background walkers; modern
+   engines auto-promote the scenario walkers' CSS transitions. */
+.walker.bg { will-change: transform; }
+.walker .creature { opacity: var(--op, 0.13); transition: opacity 0.4s ease; }
+
+/* ── Background walker — CSS keyframe drives translation ────────────── */
+.walker.bg {
+  top: var(--top);
+  animation: walk-ltr var(--dur, 36s) linear infinite;
+  animation-delay: var(--d, 0s);
+}
+.walker.bg.rtl { animation-name: walk-rtl; }
+@keyframes walk-ltr {
+  from { transform: translateX(-60px); }
+  to   { transform: translateX(calc(100vw + 60px)); }
+}
+@keyframes walk-rtl {
+  from { transform: translateX(calc(100vw + 60px)); }
+  to   { transform: translateX(-60px); }
+}
+
+/* ── Scenario walker — JS sets transform inline ─────────────────────── */
+.walker.scen {
+  top: 0;
+  animation: scen-fade-in 0.5s ease both;
+}
+@keyframes scen-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Side flip + responsive scale — RTL carries scaleX(-1) on .flip ─── */
+.walker .flip {
+  transition: transform 0.5s ease-out;
+  transform: scale(var(--walker-scale, 1));
+  transform-origin: center;
+}
+.walker.rtl    .flip { transform: scaleX(-1) scale(var(--walker-scale, 1)); transform-origin: center; }
+.walker.facing .flip { transform: scaleX(1)  scale(var(--walker-scale, 1)) !important; }
+
+/* ── Bright LED — surveillance scenario ─────────────────────────────── */
+.walker.bright .creature .led { opacity: 1; transition: opacity 0.5s ease; }
+.walker.bright .creature .led-front {
+  opacity: 1;
+  transform-box: fill-box; transform-origin: center;
+  transform: scale(1.25);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* ── Speech bubble ──────────────────────────────────────────────────── */
+.bubble {
+  position: absolute;
+  left: 50%; bottom: calc(100% + 2px);
+  width: 26px; height: 19px;
+  opacity: 0;
+  transform: translate(-50%, 0) scale(calc(0.7 * var(--walker-scale, 1)));
+  transform-origin: center bottom;
+  transition: opacity 0.32s ease, transform 0.32s cubic-bezier(0.2, 1.2, 0.4, 1);
+  pointer-events: none;
+  color: var(--accent, #2A4D6E);
+}
+.bubble svg { width: 100%; height: 100%; display: block; }
+.bubble.on {
+  opacity: 0.4;
+  transform: translate(-50%, 0) scale(var(--walker-scale, 1));
+}
+.bubble-text {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 8px; font-weight: 500;
+}
+
+/* ── Creature base ──────────────────────────────────────────────────── */
+.creature { display: block; overflow: visible; }
+.creature g { transform-box: view-box; }
+.creature line, .creature circle, .creature rect, .creature path {
+  stroke: currentColor; fill: none;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.creature .profile { opacity: 1; transition: opacity 0.4s ease; }
+.creature .frontal { opacity: 0; transition: opacity 0.4s ease; }
+
+/* ── Human gait ─────────────────────────────────────────────────────── */
+.creature.human .profile .torso-bob {
+  animation: bob var(--gait-dur, 1.05s) ease-in-out infinite;
+}
+.creature.human .profile .arm-l {
+  transform-origin: 12px 13px;
+  animation: arm-swing var(--gait-dur, 1.05s) ease-in-out infinite;
+  animation-delay: calc(var(--gait-dur, 1.05s) * -0.5);
+}
+.creature.human .profile .arm-r {
+  transform-origin: 12px 13px;
+  animation: arm-swing var(--gait-dur, 1.05s) ease-in-out infinite;
+}
+.creature.human .profile .leg-l {
+  transform-origin: 12px 24px;
+  animation: leg-swing var(--gait-dur, 1.05s) ease-in-out infinite;
+}
+.creature.human .profile .leg-r {
+  transform-origin: 12px 24px;
+  animation: leg-swing var(--gait-dur, 1.05s) ease-in-out infinite;
+  animation-delay: calc(var(--gait-dur, 1.05s) * -0.5);
+}
+@keyframes bob       { 0%,100% { transform: translateY(0); }    50% { transform: translateY(-0.6px); } }
+@keyframes leg-swing { 0%,100% { transform: rotate( 22deg); } 50% { transform: rotate(-22deg); } }
+@keyframes arm-swing { 0%,100% { transform: rotate(-18deg); } 50% { transform: rotate( 18deg); } }
+
+/* ── Robot gait ─────────────────────────────────────────────────────── */
+.creature.robot .profile .antenna {
+  transform-origin: 12px 4px;
+  animation: antenna-wobble 1.8s ease-in-out infinite;
+}
+.creature.robot .profile .arm-l {
+  transform-origin: 12px 14px;
+  animation: arm-tick var(--gait-dur, 1.05s) linear infinite;
+  animation-delay: calc(var(--gait-dur, 1.05s) * -0.5);
+}
+.creature.robot .profile .arm-r {
+  transform-origin: 12px 14px;
+  animation: arm-tick var(--gait-dur, 1.05s) linear infinite;
+}
+.creature.robot .profile .leg-l {
+  transform-origin: 12px 24px;
+  animation: leg-tick var(--gait-dur, 1.05s) linear infinite;
+}
+.creature.robot .profile .leg-r {
+  transform-origin: 12px 24px;
+  animation: leg-tick var(--gait-dur, 1.05s) linear infinite;
+  animation-delay: calc(var(--gait-dur, 1.05s) * -0.5);
+}
+.creature.robot .profile .led { fill: var(--accent, #2A4D6E); stroke: none; opacity: 0.55; }
+@keyframes leg-tick       { 0%,100% { transform: rotate( 18deg); } 50% { transform: rotate(-18deg); } }
+@keyframes arm-tick       { 0%,100% { transform: rotate(-12deg); } 50% { transform: rotate( 12deg); } }
+@keyframes antenna-wobble { 0%,100% { transform: rotate( -6deg); } 50% { transform: rotate(  6deg); } }
+
+/* ── Rest pose (applied for both .standing and .facing) ─────────────── */
+.walker.standing .creature .profile .torso-bob,
+.walker.facing   .creature .profile .torso-bob {
+  animation: none; transform: translateY(0);
+}
+.walker.standing .creature .profile .arm-l,
+.walker.facing   .creature .profile .arm-l { animation: none; transform: rotate(0deg); }
+.walker.standing .creature .profile .arm-r,
+.walker.facing   .creature .profile .arm-r { animation: none; transform: rotate(0deg); }
+.walker.standing .creature .profile .leg-l,
+.walker.facing   .creature .profile .leg-l { animation: none; transform: rotate( 4deg); }
+.walker.standing .creature .profile .leg-r,
+.walker.facing   .creature .profile .leg-r { animation: none; transform: rotate(-4deg); }
+.walker.standing .creature.robot .profile .antenna,
+.walker.facing   .creature.robot .profile .antenna {
+  animation: none; transform: rotate(0deg);
+}
+
+/* ── Gestures (played during .say) ──────────────────────────────────── */
+.walker.gesture-talk.standing:not(.facing) .creature.human .profile .arm-l {
+  animation: g-talk-l var(--gesture-dur, 1s) ease-in-out 1;
+}
+.walker.gesture-talk.standing:not(.facing) .creature.human .profile .arm-r {
+  animation: g-talk-r var(--gesture-dur, 1s) ease-in-out 1;
+}
+@keyframes g-talk-l {
+  0%, 100% { transform: rotate(0deg); }
+  15%      { transform: rotate(-22deg); }
+  32%      { transform: rotate(  5deg); }
+  50%      { transform: rotate(-15deg); }
+  68%      { transform: rotate( 12deg); }
+  85%      { transform: rotate(-10deg); }
+}
+@keyframes g-talk-r {
+  0%, 100% { transform: rotate(0deg); }
+  15%      { transform: rotate(  8deg); }
+  32%      { transform: rotate(-18deg); }
+  50%      { transform: rotate( 12deg); }
+  68%      { transform: rotate(-15deg); }
+  85%      { transform: rotate( 10deg); }
+}
+
+.walker.gesture-shrug.standing:not(.facing) .creature.human .profile .arm-l {
+  animation: g-question-l var(--gesture-dur, 1s) ease-in-out 1;
+}
+@keyframes g-question-l {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(168deg); }
+  70%      { transform: rotate(168deg); }
+}
+
+.walker.gesture-emphasis.standing:not(.facing) .creature.human .profile .arm-l {
+  animation: g-emphasis-l var(--gesture-dur, 1s) ease-in-out 1;
+}
+.walker.gesture-emphasis.standing:not(.facing) .creature.human .profile .arm-r {
+  animation: g-emphasis-r var(--gesture-dur, 1s) ease-in-out 1;
+}
+@keyframes g-emphasis-l {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 65% { transform: rotate(-160deg); }
+}
+@keyframes g-emphasis-r {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 65% { transform: rotate(160deg); }
+}
+
+.walker.gesture-comm.standing:not(.facing) .creature.robot .profile .antenna {
+  animation: antenna-wobble 0.45s ease-in-out infinite;
+}
+.walker.gesture-comm.standing:not(.facing) .creature.robot .profile .led {
+  animation: g-robot-led var(--gesture-dur, 1s) ease-in-out 1;
+}
+@keyframes g-robot-led {
+  0%, 100% { opacity: 0.55; }
+  20%, 60% { opacity: 1;    }
+  40%, 80% { opacity: 0.30; }
+}
+
+/* ── Facing — swap profile→frontal ──────────────────────────────────── */
+.walker.facing { animation-play-state: paused; }
+.walker.facing .creature .profile { opacity: 0; }
+.walker.facing .creature .frontal { opacity: 1; }
+
+/* ── Tab hidden — pause everything (zero CPU while away) ─────────────── */
+.creatures-layer.layer-paused,
+.creatures-layer.layer-paused * {
+  animation-play-state: paused !important;
+}
+
+/* ── Responsive: drive walker + bubble size through --walker-scale ──
+   We scale the inner .flip/.bubble rather than the layer itself so that
+   walkers still traverse the full viewport (vw/vh positioning) at every
+   size instead of being cropped into a sub-band. */
+@media (max-width: 480px) {
+  .creatures-layer { --walker-scale: 0.55; }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .creatures-layer { --walker-scale: 0.75; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .creatures-layer { --walker-scale: 0.9; }
+}
+@media (min-width: 1800px) {
+  .creatures-layer { --walker-scale: 1.2; }
+}
+@media (min-width: 2400px) {
+  .creatures-layer { --walker-scale: 1.5; }
+}
+
+/* ── Respect prefers-reduced-motion ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .walker, .creature *, .creature .led { animation: none !important; }
+}

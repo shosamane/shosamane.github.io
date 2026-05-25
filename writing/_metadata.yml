@@ -1,0 +1,16 @@
+# Defaults for all posts under writing/
+# Quarto applies these to every .qmd in this directory.
+
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-depth: 2
+    code-tools: false
+    anchor-sections: true
+
+# Listing-friendly defaults
+author: "Your Name"
+citation: true
+date-format: "MMM DD, YYYY"
+page-layout: article

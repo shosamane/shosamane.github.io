@@ -1,0 +1,65 @@
+---
+title: "Sudhamshu Hosamane"
+subtitle: "Doctoral researcher at Rutgers studying how political talk — and political mistruths — travel through the encrypted, semi-private platforms that increasingly mediate it. My work joins computational social science to field experiments, with recent attention to hate-speech campaigns on Philippine Facebook and misinformation corrections on Indian WhatsApp."
+eyebrow: "Researcher · misinformation, platforms, political communication"
+pagetitle: "Sudhamshu Hosamane — Researcher, misinformation & political platforms"
+include-in-header:
+  - text: |
+      <link rel="stylesheet" href="assets/creatures.css">
+      <script src="assets/creatures.js" defer></script>
+listing:
+  - id: recent-writing
+    contents: writing
+    type: default
+    sort: "date desc"
+    max-items: 4
+    fields: [date, title, description, reading-time, categories]
+    feed: false
+    date-format: "MMM DD, YYYY"
+    sort-ui: false
+    filter-ui: false
+toc: false
+page-layout: article
+---
+
+## Now {.rule}
+
+::: {.now}
+Reading
+:   *Network Propaganda* — Benkler, Faris & Roberts
+
+Writing
+:   A chapter on hate-speech campaigns in the 2016 Philippine elections
+
+Working on
+:   Adaptive field-experimental tools for misinformation correction on WhatsApp
+
+Listening
+:   The *Lawfare* podcast — content moderation and elections series
+:::
+
+## Recent writing {.rule}
+
+::: {#recent-writing}
+:::
+
+[All essays →](writing/index.qmd){.eyebrow}
+
+## Selected work {.rule}
+
+::: {.cv-block}
+
+2025
+:   **Hate Speech Campaigns in the 2016 Philippine Elections on Facebook** \
+    Sudhamshu Hosamane, Kiran Garimella · *Proceedings of ICWSM ’25*
+
+2024
+:   **Navigating Hate Speech and Political Influence on Philippine Social Media** \
+    *Plenary talk* · International Conference on Computational Social Science (IC2S2), Philadelphia
+
+2024
+:   **Promoting Information Integrity in Minoritized Communities** \
+    *Panel* · Knight Media Forum, Miami
+:::
+
+[Full CV →](about.qmd){.eyebrow}

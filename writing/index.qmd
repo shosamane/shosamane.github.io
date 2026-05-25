@@ -1,0 +1,24 @@
+---
+title: "Writing"
+subtitle: "Essays, field notes, and short observations — mostly on infrastructures of accountability, occasionally on the books I happen to be reading."
+eyebrow: "Index"
+listing:
+  contents: .
+  type: default
+  sort: "date desc"
+  categories: true
+  feed:
+    title: "Your Name — Writing"
+    description: "Essays on technology and society."
+  fields: [date, title, description, reading-time, categories]
+  date-format: "MMM DD, YYYY"
+  page-size: 20
+  filter-ui: false
+  sort-ui: false
+page-layout: article
+toc: false
+---
+
+::: {.eyebrow style="margin-top:1.2rem"}
+Most-recent first
+:::
