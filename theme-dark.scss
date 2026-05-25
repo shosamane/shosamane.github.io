@@ -47,9 +47,18 @@ $table-striped-bg:      rgba(255, 255, 255, 0.02);
 
 /*-- scss:rules --*/
 
+// Hardcoded — Quarto's multi-file SCSS pipeline doesn't reliably propagate
+// theme-dark.scss's redefinition of $paper into `#{$paper}` interpolation,
+// so the dark bundle would otherwise emit the light hex. Keep these
+// literals in sync with the $paper/$ink/etc. variables above.
 :root {
-  --ink:    #{$ink};
-  --accent: #{$accent};
+  --paper:       #14130F;
+  --ink:         #F8F4E8;
+  --muted:       #8E887A;
+  --rule:        rgba(236, 231, 220, 0.13);
+  --rule-soft:   rgba(236, 231, 220, 0.06);
+  --accent:      #84ACD2;
+  --accent-soft: rgba(132, 172, 210, 0.12);
 }
 
 .navbar {

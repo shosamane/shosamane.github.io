@@ -100,11 +100,17 @@ $footer-fg:                    $muted;
 
 /*-- scss:rules --*/
 
-// Expose two theme tokens as CSS custom properties so vanilla CSS/JS
-// (e.g. assets/creatures.css) can reference them and adapt to dark mode.
+// Expose the design tokens as CSS custom properties so vanilla CSS/JS
+// (e.g. assets/creatures.css, the speech-bubble SVG markup) can reference
+// them and adapt to dark mode. Mirrors the prototype's :root declarations.
 :root {
-  --ink:    #{$ink};
-  --accent: #{$accent};
+  --paper:       #{$paper};
+  --ink:         #{$ink};
+  --muted:       #{$muted};
+  --rule:        #{$rule};
+  --rule-soft:   #{$rule-soft};
+  --accent:      #{$accent};
+  --accent-soft: #{$accent-soft};
 }
 
 // ── Page chrome ──────────────────────────────────────────────────────

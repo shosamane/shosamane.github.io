@@ -77,7 +77,7 @@
         '<line x1="12" y1="4" x2="12" y2="0.5" stroke-width="1"/>' +
         '<circle cx="12" cy="0.5" r="0.8" fill="currentColor" stroke="none"/>' +
         '<rect x="8.5" y="3.5" width="7" height="6" rx="0.6" stroke-width="1.1"/>' +
-        '<circle class="led-front" cx="12" cy="6.5" r="1.4" fill="var(--accent,#2A4D6E)" stroke="none" opacity="0.9"/>' +
+        '<circle class="led-front" cx="12" cy="6.5" r="1.4" fill="var(--accent)" stroke="none" opacity="0.9"/>' +
         '<line x1="12" y1="9.5" x2="12" y2="11" stroke-width="1.1"/>' +
         '<rect x="8.5" y="11" width="7" height="13" rx="0.6" stroke-width="1.1"/>' +
         '<line x1="9"  y1="13" x2="5.5"  y2="22" stroke-width="1.1"/>' +
@@ -92,7 +92,7 @@
     return '<div class="bubble" aria-hidden="true">' +
       '<svg viewBox="0 0 26 19" aria-hidden="true">' +
         '<path d="M 3 1 H 23 Q 25 1 25 3 V 11 Q 25 13 23 13 H 15 L 13 17 L 11 13 H 3 Q 1 13 1 11 V 3 Q 1 1 3 1 Z"' +
-              ' fill="var(--paper,#FAF7F2)" stroke="currentColor" stroke-width="0.7"/>' +
+              ' fill="var(--paper)" stroke="currentColor" stroke-width="0.7"/>' +
         '<text class="bubble-text" x="13" y="9.7" text-anchor="middle"' +
               ' fill="currentColor" stroke="none">·</text>' +
       '</svg>' +
