@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Your Name — Writing</title>
+<link>https://sudhamshu.info/writing/</link>
+<atom:link href="https://sudhamshu.info/writing/index.xml" rel="self" type="application/rss+xml"/>
+<description>Essays on technology and society.</description>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Tue, 14 Apr 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>The Quiet Politics of File Formats</title>
+  <dc:creator>Your Name</dc:creator>
+  <link>https://sudhamshu.info/writing/file-formats.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="dropcap">
+<p>The infrastructures that produce our most consequential disputes are rarely the ones we argue about. A model card is contested; a JSON schema is not. A risk register is debated in the press; the file format it lives in moves through every stage of the policymaking process untouched. This is not an accident.</p>
+</div>
+<p>For three years I have been collecting, with a colleague, the small documents that surround machine‑learning systems in the public sector — procurement attachments, vendor questionnaires, the JSON appendices to risk frameworks. The pattern is consistent: where policy demands ambiguity, the schema demands choice. The schema wins.<sup>1</sup></p>
+<section id="the-schema-as-policy" class="level2">
+<h2 class="anchored" data-anchor-id="the-schema-as-policy">1. The schema as policy</h2>
+<p>Consider a deceptively boring field: the <code>risk_level</code> enum in a municipal AI procurement form. It admits three values — <em>minimal</em>, <em>limited</em>, <em>high</em> — and one of them is preselected. The default, of course, is <em>limited</em>. Most procurement officers report never having changed it.</p>
+<blockquote class="blockquote">
+<p>The default is not a setting. It is a policy decision deferred until the moment of friction makes it permanent.</p>
+</blockquote>
+<p>We can read this two ways. The charitable reading: defaults are guardrails, useful in volume. The less charitable: defaults are the residue of an argument someone had at a working group, transcribed into permanent shape and shipped to thirty thousand offices.</p>
+</section>
+<section id="exif-or-the-camera-that-wrote-the-law" class="level2">
+<h2 class="anchored" data-anchor-id="exif-or-the-camera-that-wrote-the-law">2. EXIF, or, the camera that wrote the law</h2>
+<p>EXIF — the metadata appended to every photograph your camera takes — was, for most of its life, a curiosity. Until the day a court admitted it as evidence and the day after that, when an evidentiary standard quietly attached itself to a 1995 specification authored by a Japanese trade group. The trade group was not consulted.</p>
+<div class="placeholder" data-caption="Figure 1. A schematic of the EXIF block referenced in State v. — (2019). The fields highlighted in the original opinion are marked; the fields the photographer could have controlled, in the manual that came with her camera, are not.">
+<p>[ figure · schematic ]</p>
+</div>
+<p>This is the quiet politics of file formats: they accrete authority by being adjacent to other things that already have it. A camera ships with a schema; the schema attends a trial; the trial cites the schema; the schema returns to the camera, now slightly more sovereign than it was the day before.</p>
+</section>
+<section id="a-small-example" class="level2">
+<h2 class="anchored" data-anchor-id="a-small-example">3. A small example</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb1-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"system_type"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"decision_support"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb1-3">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"risk_level"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"limited"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span>     <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">//</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">the</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">default</span></span>
+<span id="cb1-4">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"human_in_the_loop"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">true</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span>   <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">//</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">always</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">true;</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">nobody</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">checks</span></span>
+<span id="cb1-5">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"data_sources"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"internal"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">]</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb1-6">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"model_card_uri"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">null</span></span>
+<span id="cb1-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div></div>
+<p>Each of these fields is a hinge. <code>human_in_the_loop</code> is the most consequential of them, and the least audited: in a 2024 study of 412 procurement filings across six U.S. cities, the boolean was set to <code>true</code> in every single one.</p>
+<hr>
+<p><em>A version of this essay appears in the Spring 2026 issue of an academic journal whose title I will add when the embargo lifts.</em></p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>With apologies to those who have made the same point in other words. The schema-wins-over-policy intuition is at least as old as Suchman (1995) and arguably older.↩︎</p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{name2026,
+  author = {Name, Your},
+  title = {The {Quiet} {Politics} of {File} {Formats}},
+  date = {2026-04-14},
+  url = {https://sudhamshu.info/writing/file-formats.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-name2026" class="csl-entry quarto-appendix-citeas">
+Name, Your. 2026. <span>“The Quiet Politics of File Formats.”</span>
+April 14. <a href="https://sudhamshu.info/writing/file-formats.html">https://sudhamshu.info/writing/file-formats.html</a>.
+</div></div></section></div> ]]></description>
+  <category>infrastructure</category>
+  <category>standards</category>
+  <guid>https://sudhamshu.info/writing/file-formats.html</guid>
+  <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Auditors Without Power</title>
+  <dc:creator>Your Name</dc:creator>
+  <link>https://sudhamshu.info/writing/auditors.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>The audit, as currently practiced in algorithmic accountability, is doing a great deal of cultural work. It is rarely, in any meaningful sense, doing governance work.</p>
+<p>This is not a complaint about the people who perform audits. The auditors I have spent time with are conscientious, technically skilled, and clear about what their reports can and cannot say. The problem is structural. We have built an audit <em>aesthetic</em> without building the institutional machinery that historically gave audits force in finance, in medicine, in aviation: tenure, indemnity, subpoena, and a regulator on the other end willing to act.</p>
+<section id="what-audit-reports-actually-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-audit-reports-actually-do">What audit reports actually do</h2>
+<p>In the absence of that machinery, an audit report does three things. It records. It performs. It defers. It very rarely <em>binds</em>.</p>
+<blockquote class="blockquote">
+<p>Compliance is a performance, and the report is its script.</p>
+</blockquote>
+<p>This is not new. The accounting scandals of the early 2000s ran on the same substrate: an industry full of careful professionals, producing competent reports, with no consequences attached to the reports themselves. The remedy, eventually, was Sarbanes‑Oxley — not a better template for audits, but a redistribution of legal exposure.</p>
+</section>
+<section id="the-shape-of-an-alternative" class="level2">
+<h2 class="anchored" data-anchor-id="the-shape-of-an-alternative">The shape of an alternative</h2>
+<p>I have written elsewhere about <a href="procurement.qmd" title="[forthcoming]">procurement as a more promising site</a> for binding accountability. The short version: contracts have teeth that reports do not. A clause is enforceable; a finding is not.</p>
+<p><em>More to come.</em></p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{name2026,
+  author = {Name, Your},
+  title = {Auditors {Without} {Power}},
+  date = {2026-02-02},
+  url = {https://sudhamshu.info/writing/auditors.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-name2026" class="csl-entry quarto-appendix-citeas">
+Name, Your. 2026. <span>“Auditors Without Power.”</span> February 2. <a href="https://sudhamshu.info/writing/auditors.html">https://sudhamshu.info/writing/auditors.html</a>.
+</div></div></section></div> ]]></description>
+  <category>audit</category>
+  <category>governance</category>
+  <guid>https://sudhamshu.info/writing/auditors.html</guid>
+  <pubDate>Mon, 02 Feb 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>On the Disappearance of the Default</title>
+  <dc:creator>Your Name</dc:creator>
+  <link>https://sudhamshu.info/writing/default.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>There is a small literature on defaults — most of it within behavioral economics, framed in the cheerful vocabulary of “nudges.” That framing was useful, once. It is no longer enough.</p>
+<p>A default is not a small thing. A default is the option you accept by not acting. In a system that asks for action at scale, defaults <em>are</em> the system. They are the answer the system gives when its users are tired, unconfident, or absent.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a short field note, not a finished argument. I am writing it down because I keep losing the thread when I try to discuss it out loud, and that is usually a sign the thread is worth holding on to.</p>
+</div>
+</div>
+<p>The political question is not “is the default <em>good</em>?” but “<em>who</em> chose it, and <em>how would anyone know</em>?” The honest answer in most contemporary software is: nobody can tell, and the people who chose it have moved teams.</p>
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{name2026,
+  author = {Name, Your},
+  title = {On the {Disappearance} of the {Default}},
+  date = {2026-01-09},
+  url = {https://sudhamshu.info/writing/default.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-name2026" class="csl-entry quarto-appendix-citeas">
+Name, Your. 2026. <span>“On the Disappearance of the Default.”</span>
+January 9. <a href="https://sudhamshu.info/writing/default.html">https://sudhamshu.info/writing/default.html</a>.
+</div></div></section></div> ]]></description>
+  <category>notes</category>
+  <guid>https://sudhamshu.info/writing/default.html</guid>
+  <pubDate>Fri, 09 Jan 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

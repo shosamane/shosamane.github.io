@@ -1,0 +1,142 @@
+/* ──────────────────────────────────────────────────────────────────────
+   Researcher portfolio — small CSS overrides
+   Anything that can't easily live in SCSS (CSS custom properties,
+   :root-level variables, container queries, print rules) goes here.
+   ────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --measure: 38rem;
+}
+
+/* Generous top padding inside .quarto-title-block */
+main.content > .quarto-title-block.default {
+  margin-bottom: 2.4rem;
+}
+
+/* "Now" panel on the home page — author with ::: {.now} ... ::: */
+.now {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  row-gap: 0.6rem;
+  column-gap: 1.1rem;
+  margin: 1.4rem 0 2.4rem;
+}
+.now dt {
+  font-family: var(--bs-font-monospace, "JetBrains Mono", monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bs-secondary-color, #6B6557);
+}
+.now dd { margin: 0; }
+
+/* Section rule — author with ## Heading {.rule} */
+h2.rule {
+  font-family: var(--bs-font-monospace, "JetBrains Mono", monospace);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bs-secondary-color, #6B6557);
+  border-bottom: 0.5px solid var(--bs-border-color, rgba(0,0,0,.14));
+  padding-bottom: 0.5rem;
+  margin-top: 2.6rem;
+}
+
+/* Mono small-caps used in title blocks */
+.eyebrow {
+  font-family: var(--bs-font-monospace, "JetBrains Mono", monospace);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bs-secondary-color, #6B6557);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+/* Drop-cap on first paragraph after H1 in articles — opt in via .dropcap */
+.dropcap > p:first-of-type::first-letter {
+  font-family: var(--bs-font-serif, "Newsreader", Georgia, serif);
+  font-size: 3.4em;
+  line-height: 0.9;
+  float: left;
+  padding: 0.36rem 0.7rem 0 0;
+  font-weight: 360;
+}
+
+/* CV-style definition lists */
+dl.cv {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  row-gap: 0.85rem;
+  column-gap: 1.1rem;
+  align-items: baseline;
+  margin: 0.4rem 0 0;
+}
+dl.cv dt {
+  font-family: var(--bs-font-monospace, "JetBrains Mono", monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bs-secondary-color, #6B6557);
+  padding-top: 0.25rem;
+}
+dl.cv dd {
+  margin: 0;
+  padding: 0.5rem 0;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.97rem;
+  line-height: 1.5;
+}
+[data-bs-theme="dark"] dl.cv dd,
+.quarto-dark dl.cv dd {
+  border-bottom-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Tasteful figure placeholder — author with ::: {.placeholder caption=""} */
+.placeholder {
+  height: clamp(160px, 28vw, 280px);
+  border: 0.5px solid var(--bs-border-color, rgba(0,0,0,.14));
+  border-radius: 2px;
+  background-image: repeating-linear-gradient(135deg, transparent 0 8px, rgba(0,0,0,0.04) 8px 9px);
+  display: grid;
+  place-items: center;
+  font-family: var(--bs-font-monospace, "JetBrains Mono", monospace);
+  font-size: 0.7rem;
+  color: var(--bs-secondary-color, #6B6557);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Responsive: stack the 110px label column on narrow phones ─────── */
+@media (max-width: 480px) {
+  .now,
+  dl.cv {
+    grid-template-columns: 1fr;
+    row-gap: 0.35rem;
+    column-gap: 0;
+  }
+  .now dt,
+  dl.cv dt {
+    padding-top: 0.5rem;
+  }
+  dl.cv dd {
+    padding-top: 0;
+  }
+}
+
+/* ── Responsive: bump base type a touch on very large monitors ─────── */
+@media (min-width: 1800px) {
+  :root { font-size: 17.5px; }
+}
+@media (min-width: 2400px) {
+  :root { font-size: 19px; }
+}
+
+/* Print rules — readable, no nav */
+@media print {
+  .navbar, .nav-footer, #quarto-margin-sidebar, .sidebar { display: none !important; }
+  body { font-size: 11pt; line-height: 1.5; color: #000; background: #fff; }
+  h1, h2, h3 { color: #000; page-break-after: avoid; }
+  a { color: #000; text-decoration: none; }
+}

@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am a PhD student at Rutgers University’s School of Communication and Information, working with Kiran Garimella. My current project follows misinformation as it moves through private messaging platforms — encrypted, hard to instrument, and increasingly the dominant medium of political talk in much of the world. A second strand, supported by the Security, Trust & Safety Initiative at Cornell Tech, traces the organization of hate-speech campaigns through the 2016 Philippine elections on Facebook.\nBefore Rutgers I read computational social science at the University of Chicago, where I worked with Molly Offer-Westort and Nick Feamster on adaptive field-experimental tools for correcting misperceptions on Indian WhatsApp. Earlier still I was an engineer — embedded firmware at Bosch, a brief turn co-founding a small water-monitoring startup, and an undergraduate stint on the BITS Pilani Hyperloop pod team."
+  },
+  {
+    "objectID": "about.html#positions",
+    "href": "about.html#positions",
+    "title": "About",
+    "section": "Positions",
+    "text": "Positions\n\n\n2023–\n\nGraduate Research Assistant — Rutgers University, School of Communication and Information\n\n2022–23\n\nGraduate Research Assistant — Data Science Institute, University of Chicago\n\n2022\n\nSummer Fellow — Chicago Summer of eXistential Risk, University of Chicago\n\n2019–21\n\nSenior Software Engineer — Bosch Global Software Technologies, Bangalore\n\n2018–19\n\nLead Firmware Engineer — Smarterhomes Technologies, Bangalore\n\n2017–18\n\nCo-Founder — Aquassure, Bangalore"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\n\n\n2023–\n\nPhD, Information Science — Rutgers University\nAdvisor: Kiran Garimella\n\n2024–\n\nMS, Statistics — Rutgers University\n\n2021–23\n\nMA, Computational Social Science — University of Chicago\nThesis: Correcting Misperceptions on Indian WhatsApp with Experimental Adaptation · Advisor: Molly Offer-Westort\n\n2014–18\n\nBEng, Electronics and Instrumentation Engineering — BITS Pilani\nThesis: Building a versatile multi-3G/4G platform for real-time mobile applications · Advisor: Malati Hegde (IISc)"
+  },
+  {
+    "objectID": "about.html#selected-publications",
+    "href": "about.html#selected-publications",
+    "title": "About",
+    "section": "Selected publications",
+    "text": "Selected publications\n\n\n2025\n\nHate Speech Campaigns in the 2016 Philippine Elections on Facebook\nSudhamshu Hosamane, Kiran Garimella · Proceedings of the International AAAI Conference on Web and Social Media (ICWSM ’25)"
+  },
+  {
+    "objectID": "about.html#selected-talks",
+    "href": "about.html#selected-talks",
+    "title": "About",
+    "section": "Selected talks",
+    "text": "Selected talks\n\n\n2024\n\nNavigating Hate Speech and Political Influence on Philippine Social Media — Security, Trust & Safety Initiative Lunch Seminar, Cornell Tech\n\n2024\n\nNavigating Hate Speech and Political Influence on Philippine Social Media — Plenary, IC2S2, Philadelphia\n\n2024\n\nPromoting Information Integrity in Minoritized Communities — Panel, Knight Media Forum, Miami\n\n2024\n\nNavigating Hate Speech and Political Influence on Philippine Social Media — Rutgers Conference for Rising Stars in Graduate Research, New Brunswick"
+  },
+  {
+    "objectID": "about.html#honors-fellowships",
+    "href": "about.html#honors-fellowships",
+    "title": "About",
+    "section": "Honors & fellowships",
+    "text": "Honors & fellowships\n\n\n2025\n\nSecurity, Trust & Safety Initiative Fellowship Grant — Cornell Tech\n\n2023–24\n\nGraduate Fellowship — Rutgers University\n\n2022\n\nChicago Summer of eXistential Risk Fellowship Grant\n\n2021–23\n\nMaroon Scholarship — University of Chicago"
+  },
+  {
+    "objectID": "about.html#teaching",
+    "href": "about.html#teaching",
+    "title": "About",
+    "section": "Teaching",
+    "text": "Teaching\n\n\nSpring 2017\n\nMicroprocessor Programming and Interfacing — BITS Pilani (labs & grading)"
+  },
+  {
+    "objectID": "about.html#service",
+    "href": "about.html#service",
+    "title": "About",
+    "section": "Service",
+    "text": "Service\n\n\n2024\n\nProgram Committee — International Workshop on Cyber Social Threats (CySoc)\n\n2024\n\nReviewer — ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW)\n\n2022–23\n\nReviewer — International Conference on Computational Social Science (IC2S2)"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\n\n\nEmail\n\nsh1779@rutgers.edu\n\nLinkedIn\n\nin/sudhamshu-m-hosamane\n\nGitHub\n\nsudhamshow\n\nTwitter\n\n@theSudhamshow"
+  },
+  {
+    "objectID": "writing/index.html",
+    "href": "writing/index.html",
+    "title": "Writing",
+    "section": "",
+    "text": "Most-recent first\n\n\n\n\n\n\n\n\n\n\nThe Quiet Politics of File Formats\n\n\n\ninfrastructure\n\nstandards\n\n\n\nEXIF tags, JSON-LD, and the schemas no one reads do more governance work than most policy memos.\n\n\n\n\n\nApr 14, 2026\n\n3 min\n\n\n\n\n\n\nAuditors Without Power\n\n\n\naudit\n\ngovernance\n\n\n\nWhy the audit has become the dominant aesthetic of AI accountability — and what that obscures.\n\n\n\n\n\nFeb 02, 2026\n\n1 min\n\n\n\n\n\n\nOn the Disappearance of the Default\n\n\n\nnotes\n\n\n\nA short note on the politics of preselected options, and the long shadow they cast on consent.\n\n\n\n\n\nJan 09, 2026\n\n1 min\n\n\n\n\nNo matching items\nCitationBibTeX citation:@online{name,\n  author = {Name, Your},\n  title = {Writing},\n  url = {https://sudhamshu.info/writing/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nName, Your. n.d. “Writing.” https://sudhamshu.info/writing/."
+  },
+  {
+    "objectID": "writing/default.html",
+    "href": "writing/default.html",
+    "title": "On the Disappearance of the Default",
+    "section": "",
+    "text": "There is a small literature on defaults — most of it within behavioral economics, framed in the cheerful vocabulary of “nudges.” That framing was useful, once. It is no longer enough.\nA default is not a small thing. A default is the option you accept by not acting. In a system that asks for action at scale, defaults are the system. They are the answer the system gives when its users are tired, unconfident, or absent.\n\n\n\n\n\n\nNote\n\n\n\nThis is a short field note, not a finished argument. I am writing it down because I keep losing the thread when I try to discuss it out loud, and that is usually a sign the thread is worth holding on to.\n\n\nThe political question is not “is the default good?” but “who chose it, and how would anyone know?” The honest answer in most contemporary software is: nobody can tell, and the people who chose it have moved teams.\n\n\n\nCitationBibTeX citation:@online{name2026,\n  author = {Name, Your},\n  title = {On the {Disappearance} of the {Default}},\n  date = {2026-01-09},\n  url = {https://sudhamshu.info/writing/default.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nName, Your. 2026. “On the Disappearance of the Default.”\nJanuary 9. https://sudhamshu.info/writing/default.html."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sudhamshu Hosamane",
+    "section": "",
+    "text": "Reading\n\nNetwork Propaganda — Benkler, Faris & Roberts\n\nWriting\n\nA chapter on hate-speech campaigns in the 2016 Philippine elections\n\nWorking on\n\nAdaptive field-experimental tools for misinformation correction on WhatsApp\n\nListening\n\nThe Lawfare podcast — content moderation and elections series"
+  },
+  {
+    "objectID": "index.html#now",
+    "href": "index.html#now",
+    "title": "Sudhamshu Hosamane",
+    "section": "",
+    "text": "Reading\n\nNetwork Propaganda — Benkler, Faris & Roberts\n\nWriting\n\nA chapter on hate-speech campaigns in the 2016 Philippine elections\n\nWorking on\n\nAdaptive field-experimental tools for misinformation correction on WhatsApp\n\nListening\n\nThe Lawfare podcast — content moderation and elections series"
+  },
+  {
+    "objectID": "index.html#recent-writing",
+    "href": "index.html#recent-writing",
+    "title": "Sudhamshu Hosamane",
+    "section": "Recent writing",
+    "text": "Recent writing\n\n\n\n\n\nWriting\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\nThe Quiet Politics of File Formats\n\n\n\ninfrastructure\n\nstandards\n\n\n\nEXIF tags, JSON-LD, and the schemas no one reads do more governance work than most policy memos.\n\n\n\n\n\nApr 14, 2026\n\n3 min\n\n\n\n\n\n\nAuditors Without Power\n\n\n\naudit\n\ngovernance\n\n\n\nWhy the audit has become the dominant aesthetic of AI accountability — and what that obscures.\n\n\n\n\n\nFeb 02, 2026\n\n1 min\n\n\n\n\n\n\nOn the Disappearance of the Default\n\n\n\nnotes\n\n\n\nA short note on the politics of preselected options, and the long shadow they cast on consent.\n\n\n\n\n\nJan 09, 2026\n\n1 min\n\n\n\n\nNo matching items\n\nAll essays →"
+  },
+  {
+    "objectID": "index.html#selected-work",
+    "href": "index.html#selected-work",
+    "title": "Sudhamshu Hosamane",
+    "section": "Selected work",
+    "text": "Selected work\n\n\n2025\n\nHate Speech Campaigns in the 2016 Philippine Elections on Facebook\nSudhamshu Hosamane, Kiran Garimella · Proceedings of ICWSM ’25\n\n2024\n\nNavigating Hate Speech and Political Influence on Philippine Social Media\nPlenary talk · International Conference on Computational Social Science (IC2S2), Philadelphia\n\n2024\n\nPromoting Information Integrity in Minoritized Communities\nPanel · Knight Media Forum, Miami\n\n\n\nFull CV →"
+  },
+  {
+    "objectID": "writing/file-formats.html",
+    "href": "writing/file-formats.html",
+    "title": "The Quiet Politics of File Formats",
+    "section": "",
+    "text": "The infrastructures that produce our most consequential disputes are rarely the ones we argue about. A model card is contested; a JSON schema is not. A risk register is debated in the press; the file format it lives in moves through every stage of the policymaking process untouched. This is not an accident.\nFor three years I have been collecting, with a colleague, the small documents that surround machine‑learning systems in the public sector — procurement attachments, vendor questionnaires, the JSON appendices to risk frameworks. The pattern is consistent: where policy demands ambiguity, the schema demands choice. The schema wins.1"
+  },
+  {
+    "objectID": "writing/file-formats.html#the-schema-as-policy",
+    "href": "writing/file-formats.html#the-schema-as-policy",
+    "title": "The Quiet Politics of File Formats",
+    "section": "1. The schema as policy",
+    "text": "1. The schema as policy\nConsider a deceptively boring field: the risk_level enum in a municipal AI procurement form. It admits three values — minimal, limited, high — and one of them is preselected. The default, of course, is limited. Most procurement officers report never having changed it.\n\nThe default is not a setting. It is a policy decision deferred until the moment of friction makes it permanent.\n\nWe can read this two ways. The charitable reading: defaults are guardrails, useful in volume. The less charitable: defaults are the residue of an argument someone had at a working group, transcribed into permanent shape and shipped to thirty thousand offices."
+  },
+  {
+    "objectID": "writing/file-formats.html#exif-or-the-camera-that-wrote-the-law",
+    "href": "writing/file-formats.html#exif-or-the-camera-that-wrote-the-law",
+    "title": "The Quiet Politics of File Formats",
+    "section": "2. EXIF, or, the camera that wrote the law",
+    "text": "2. EXIF, or, the camera that wrote the law\nEXIF — the metadata appended to every photograph your camera takes — was, for most of its life, a curiosity. Until the day a court admitted it as evidence and the day after that, when an evidentiary standard quietly attached itself to a 1995 specification authored by a Japanese trade group. The trade group was not consulted.\n\n[ figure · schematic ]\n\nThis is the quiet politics of file formats: they accrete authority by being adjacent to other things that already have it. A camera ships with a schema; the schema attends a trial; the trial cites the schema; the schema returns to the camera, now slightly more sovereign than it was the day before."
+  },
+  {
+    "objectID": "writing/file-formats.html#a-small-example",
+    "href": "writing/file-formats.html#a-small-example",
+    "title": "The Quiet Politics of File Formats",
+    "section": "3. A small example",
+    "text": "3. A small example\n{\n  \"system_type\": \"decision_support\",\n  \"risk_level\": \"limited\",     // &lt;- the default\n  \"human_in_the_loop\": true,   // &lt;- always true; nobody checks\n  \"data_sources\": [\"internal\"],\n  \"model_card_uri\": null\n}\nEach of these fields is a hinge. human_in_the_loop is the most consequential of them, and the least audited: in a 2024 study of 412 procurement filings across six U.S. cities, the boolean was set to true in every single one.\n\nA version of this essay appears in the Spring 2026 issue of an academic journal whose title I will add when the embargo lifts."
+  },
+  {
+    "objectID": "writing/file-formats.html#footnotes",
+    "href": "writing/file-formats.html#footnotes",
+    "title": "The Quiet Politics of File Formats",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWith apologies to those who have made the same point in other words. The schema-wins-over-policy intuition is at least as old as Suchman (1995) and arguably older.↩︎"
+  },
+  {
+    "objectID": "writing/auditors.html",
+    "href": "writing/auditors.html",
+    "title": "Auditors Without Power",
+    "section": "",
+    "text": "The audit, as currently practiced in algorithmic accountability, is doing a great deal of cultural work. It is rarely, in any meaningful sense, doing governance work.\nThis is not a complaint about the people who perform audits. The auditors I have spent time with are conscientious, technically skilled, and clear about what their reports can and cannot say. The problem is structural. We have built an audit aesthetic without building the institutional machinery that historically gave audits force in finance, in medicine, in aviation: tenure, indemnity, subpoena, and a regulator on the other end willing to act."
+  },
+  {
+    "objectID": "writing/auditors.html#what-audit-reports-actually-do",
+    "href": "writing/auditors.html#what-audit-reports-actually-do",
+    "title": "Auditors Without Power",
+    "section": "What audit reports actually do",
+    "text": "What audit reports actually do\nIn the absence of that machinery, an audit report does three things. It records. It performs. It defers. It very rarely binds.\n\nCompliance is a performance, and the report is its script.\n\nThis is not new. The accounting scandals of the early 2000s ran on the same substrate: an industry full of careful professionals, producing competent reports, with no consequences attached to the reports themselves. The remedy, eventually, was Sarbanes‑Oxley — not a better template for audits, but a redistribution of legal exposure."
+  },
+  {
+    "objectID": "writing/auditors.html#the-shape-of-an-alternative",
+    "href": "writing/auditors.html#the-shape-of-an-alternative",
+    "title": "Auditors Without Power",
+    "section": "The shape of an alternative",
+    "text": "The shape of an alternative\nI have written elsewhere about procurement as a more promising site for binding accountability. The short version: contracts have teeth that reports do not. A clause is enforceable; a finding is not.\nMore to come."
+  }
+]
