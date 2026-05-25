@@ -12,19 +12,17 @@
   position: fixed; inset: 0;
   pointer-events: none; z-index: 0;
   overflow: hidden;
-  /* Drives walker / bubble sizing across breakpoints. */
-  --walker-scale: 1;
 }
 
-/* Lift Quarto's content above the creatures layer. The navbar is
-   already above (Bootstrap .fixed-top sets z-index: 1030) and the
-   page background is painted by body, so leave both untouched. */
+/* Lift Quarto's chrome and content above the creatures layer. */
+body > main,
+body > nav.navbar,
+body > header.navbar,
+body > .nav-footer,
+body > footer,
 #quarto-content,
 #quarto-document-content,
-#quarto-margin-sidebar,
-main.content,
-footer.footer,
-.nav-footer {
+#quarto-margin-sidebar {
   position: relative;
   z-index: 1;
 }
@@ -33,11 +31,9 @@ footer.footer,
 .walker {
   position: absolute; left: 0;
   width: var(--w, 18px); height: var(--h, 30px);
+  will-change: transform;
   color: var(--ink, #0D0B07);
 }
-/* Promote only the continuously-animating background walkers; modern
-   engines auto-promote the scenario walkers' CSS transitions. */
-.walker.bg { will-change: transform; }
 .walker .creature { opacity: var(--op, 0.13); transition: opacity 0.4s ease; }
 
 /* ── Background walker — CSS keyframe drives translation ────────────── */
@@ -66,14 +62,10 @@ footer.footer,
   to   { opacity: 1; }
 }
 
-/* ── Side flip + responsive scale — RTL carries scaleX(-1) on .flip ─── */
-.walker .flip {
-  transition: transform 0.5s ease-out;
-  transform: scale(var(--walker-scale, 1));
-  transform-origin: center;
-}
-.walker.rtl    .flip { transform: scaleX(-1) scale(var(--walker-scale, 1)); transform-origin: center; }
-.walker.facing .flip { transform: scaleX(1)  scale(var(--walker-scale, 1)) !important; }
+/* ── Side flip — RTL walkers carry scaleX(-1) on .flip child ─────────── */
+.walker .flip { transition: transform 0.5s ease-out; }
+.walker.rtl .flip { transform: scaleX(-1); transform-origin: center; }
+.walker.facing .flip { transform: scaleX(1) !important; }
 
 /* ── Bright LED — surveillance scenario ─────────────────────────────── */
 .walker.bright .creature .led { opacity: 1; transition: opacity 0.5s ease; }
@@ -259,20 +251,9 @@ footer.footer,
   animation-play-state: paused !important;
 }
 
-/* ── Responsive: drive walker size through --walker-scale on small
-   viewports only. We scale the inner .flip (not the layer) so that
-   walkers still traverse the full viewport (vw/vh positioning) at
-   every size instead of being cropped into a sub-band. Bubble keeps
-   its original 0.7→1 transform so its anchor point stays aligned with
-   the walker's head at all viewport widths. */
-@media (max-width: 480px) {
-  .creatures-layer { --walker-scale: 0.55; }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .creatures-layer { --walker-scale: 0.75; }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .creatures-layer { --walker-scale: 0.9; }
+/* ── Responsive: scale layer down on small screens ──────────────────── */
+@media (max-width: 640px) {
+  .creatures-layer { transform: scale(0.7); transform-origin: top center; }
 }
 
 /* ── Respect prefers-reduced-motion ─────────────────────────────────── */
