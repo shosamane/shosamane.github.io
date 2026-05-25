@@ -32,7 +32,7 @@ body > footer,
   position: absolute; left: 0;
   width: var(--w, 18px); height: var(--h, 30px);
   will-change: transform;
-  color: var(--ink, #0D0B07);
+  color: var(--ink);
 }
 .walker .creature { opacity: var(--op, 0.13); transition: opacity 0.4s ease; }
 
