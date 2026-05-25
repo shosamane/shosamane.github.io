@@ -4,56 +4,49 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I am a PhD student at Rutgers University’s School of Communication and Information, working with Kiran Garimella. My current project follows misinformation as it moves through private messaging platforms — encrypted, hard to instrument, and increasingly the dominant medium of political talk in much of the world. A second strand, supported by the Security, Trust & Safety Initiative at Cornell Tech, traces the organization of hate-speech campaigns through the 2016 Philippine elections on Facebook.\nBefore Rutgers I read computational social science at the University of Chicago, where I worked with Molly Offer-Westort and Nick Feamster on adaptive field-experimental tools for correcting misperceptions on Indian WhatsApp. Earlier still I was an engineer — embedded firmware at Bosch, a brief turn co-founding a small water-monitoring startup, and an undergraduate stint on the BITS Pilani Hyperloop pod team."
+    "text": "I am a PhD student at Rutgers University’s School of Communication and Information, working with Kiran Garimella. My research follows misinformation as it moves through private messaging platforms — encrypted, hard to instrument, and increasingly the dominant medium of political talk in much of the world — alongside parallel strands on hate-speech campaigns in elections, peer fact-checking on WhatsApp, the accessibility of user-facing moderation tools, and the rules people write to govern their own online communities. Recent collaborations have taken me to the Max Planck Institute for Demographic Research, to Cornell Tech, and to the Security, Trust & Safety Initiative.\nBefore Rutgers I read computational social science at the University of Chicago, where I worked with Molly Offer-Westort and Nick Feamster on adaptive field-experimental tools for correcting misperceptions on Indian WhatsApp. Earlier still I was an engineer in Bangalore — firmware at Smarterhomes Technologies and Bosch Global Software."
   },
   {
     "objectID": "about.html#positions",
     "href": "about.html#positions",
     "title": "About",
     "section": "Positions",
-    "text": "Positions\n\n\n2023–\n\nGraduate Research Assistant — Rutgers University, School of Communication and Information\n\n2022–23\n\nGraduate Research Assistant — Data Science Institute, University of Chicago\n\n2022\n\nSummer Fellow — Chicago Summer of eXistential Risk, University of Chicago\n\n2019–21\n\nSenior Software Engineer — Bosch Global Software Technologies, Bangalore\n\n2018–19\n\nLead Firmware Engineer — Smarterhomes Technologies, Bangalore\n\n2017–18\n\nCo-Founder — Aquassure, Bangalore"
+    "text": "Positions\n\n\n2025–\n\nResearch Collaborator — Max Planck Institute for Demographic Research\nwith Carolina Coimbra Vieira and Emilio Zagheni\n\n2025–26\n\nResearch Collaborator — Cornell Tech / Cornell University\nwith Aditya Vashistha\n\n2022–23\n\nGraduate Research Assistant — Data Science Institute, University of Chicago\n\n2022\n\nSummer Fellow — Chicago Summer of eXistential Risk, University of Chicago\n\n2019–21\n\nSenior Software Engineer — Bosch Global Software Technologies, Bangalore\n\n2018–19\n\nLead Firmware Engineer — Smarterhomes Technologies, Bangalore"
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
     "title": "About",
     "section": "Education",
-    "text": "Education\n\n\n2023–\n\nPhD, Information Science — Rutgers University\nAdvisor: Kiran Garimella\n\n2024–\n\nMS, Statistics — Rutgers University\n\n2021–23\n\nMA, Computational Social Science — University of Chicago\nThesis: Correcting Misperceptions on Indian WhatsApp with Experimental Adaptation · Advisor: Molly Offer-Westort\n\n2014–18\n\nBEng, Electronics and Instrumentation Engineering — BITS Pilani\nThesis: Building a versatile multi-3G/4G platform for real-time mobile applications · Advisor: Malati Hegde (IISc)"
+    "text": "Education\n\n\n2023–\n\nPhD, Information Science — Rutgers University\nAdvisor: Kiran Garimella\n\n2024–\n\nMS, Statistics — Rutgers University\n\n2021–23\n\nMA, Computational Social Science — University of Chicago\nThesis: Correcting Misperceptions on Indian WhatsApp with Experimental Adaptation · Advisor: Molly Offer-Westort\n\n2014–18\n\nBEng, Electronics and Instrumentation Engineering — BITS Pilani\nThesis: A multi-3G/4G platform for real-time mobile applications · Advisor: Malati Hegde (IISc)"
   },
   {
     "objectID": "about.html#selected-publications",
     "href": "about.html#selected-publications",
     "title": "About",
     "section": "Selected publications",
-    "text": "Selected publications\n\n\n2025\n\nHate Speech Campaigns in the 2016 Philippine Elections on Facebook\nSudhamshu Hosamane, Kiran Garimella · Proceedings of the International AAAI Conference on Web and Social Media (ICWSM ’25)"
+    "text": "Selected publications\n\n\n2026\n\nEvaluating Peer Fact-Checking on WhatsApp\nSudhamshu Hosamane, Kriti Sharma, Tanvi Goyal, Molly Offer-Westort, Kiran Garimella · Proceedings of CHI ’26 · preprint\n\n2025\n\nHate Speech Campaigns in the 2016 Philippine Elections on Facebook\nSudhamshu Hosamane, Kiran Garimella · Proceedings of ICWSM ’25\n\n2025\n\nA Critical Examination of the Accessibility of User-Enacted Moderation Tools on Facebook and X\nSudhamshu Hosamane, Alyvia Walters, Yao Lyu, Shagun Jhaver · Preprint · pdf\n\n2025\n\nExamining LLM-Assisted Rule Creation in WhatsApp Groups\nSudhamshu Hosamane, Farhana Shahid, Kiran Garimella, Aditya Vashistha · Preprint · pdf"
   },
   {
     "objectID": "about.html#selected-talks",
     "href": "about.html#selected-talks",
     "title": "About",
     "section": "Selected talks",
-    "text": "Selected talks\n\n\n2024\n\nNavigating Hate Speech and Political Influence on Philippine Social Media — Security, Trust & Safety Initiative Lunch Seminar, Cornell Tech\n\n2024\n\nNavigating Hate Speech and Political Influence on Philippine Social Media — Plenary, IC2S2, Philadelphia\n\n2024\n\nPromoting Information Integrity in Minoritized Communities — Panel, Knight Media Forum, Miami\n\n2024\n\nNavigating Hate Speech and Political Influence on Philippine Social Media — Rutgers Conference for Rising Stars in Graduate Research, New Brunswick"
+    "text": "Selected talks\n\n\n2025\n\nA Critical Examination of the Accessibility of User-Enacted Moderation Tools on Facebook and X — Lunch Seminar, Google Research NYC\n\n2025\n\nEvaluating Peer Fact-Checking on WhatsApp — Yale FDS Workshop: New Directions in Social Algorithms Research\n\n2024\n\nNavigating Hate Speech and Political Influence on Philippine Social Media — Security, Trust & Safety Initiative Lunch Seminar, Cornell Tech\n\n2024\n\nNavigating Hate Speech and Political Influence on Philippine Social Media — Plenary, IC2S2, Philadelphia\n\n2024\n\nNavigating Hate Speech and Political Influence on Philippine Social Media — Rutgers Conference for Rising Stars in Graduate Research, New Brunswick"
   },
   {
     "objectID": "about.html#honors-fellowships",
     "href": "about.html#honors-fellowships",
     "title": "About",
     "section": "Honors & fellowships",
-    "text": "Honors & fellowships\n\n\n2025\n\nSecurity, Trust & Safety Initiative Fellowship Grant — Cornell Tech\n\n2023–24\n\nGraduate Fellowship — Rutgers University\n\n2022\n\nChicago Summer of eXistential Risk Fellowship Grant\n\n2021–23\n\nMaroon Scholarship — University of Chicago"
-  },
-  {
-    "objectID": "about.html#teaching",
-    "href": "about.html#teaching",
-    "title": "About",
-    "section": "Teaching",
-    "text": "Teaching\n\n\nSpring 2017\n\nMicroprocessor Programming and Interfacing — BITS Pilani (labs & grading)"
+    "text": "Honors & fellowships\n\n\n2025\n\nSecurity, Trust & Safety Initiative Fellowship — Cornell Tech\n\n2023–24\n\nGraduate Fellowship — Rutgers University\n\n2022\n\nChicago Summer of eXistential Risk Fellowship Grant\n\n2021–23\n\nMaroon Scholarship — University of Chicago"
   },
   {
     "objectID": "about.html#service",
     "href": "about.html#service",
     "title": "About",
     "section": "Service",
-    "text": "Service\n\n\n2024\n\nProgram Committee — International Workshop on Cyber Social Threats (CySoc)\n\n2024\n\nReviewer — ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW)\n\n2022–23\n\nReviewer — International Conference on Computational Social Science (IC2S2)"
+    "text": "Service\n\n\n2024\n\nProgram Committee — International Workshop on Cyber Social Threats (CySoc)\n\nReviewer\n\nACM CHI Conference on Human Factors in Computing Systems · 2025\nPNAS Nexus · ICWSM · 2024, 2026\nACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW) · 2024\nInternational Conference on Computational Social Science (IC2S2) · 2022, 2023, 2024, 2026"
   },
   {
     "objectID": "about.html#contact",
@@ -95,14 +88,14 @@
     "href": "index.html#recent-writing",
     "title": "Sudhamshu Hosamane",
     "section": "Recent writing",
-    "text": "Recent writing\n\n\n\n\n\nWriting\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\nThe Quiet Politics of File Formats\n\n\n\ninfrastructure\n\nstandards\n\n\n\nEXIF tags, JSON-LD, and the schemas no one reads do more governance work than most policy memos.\n\n\n\n\n\nApr 14, 2026\n\n3 min\n\n\n\n\n\n\nAuditors Without Power\n\n\n\naudit\n\ngovernance\n\n\n\nWhy the audit has become the dominant aesthetic of AI accountability — and what that obscures.\n\n\n\n\n\nFeb 02, 2026\n\n1 min\n\n\n\n\n\n\nOn the Disappearance of the Default\n\n\n\nnotes\n\n\n\nA short note on the politics of preselected options, and the long shadow they cast on consent.\n\n\n\n\n\nJan 09, 2026\n\n1 min\n\n\n\n\nNo matching items\n\nAll essays →"
+    "text": "Recent writing\n\n\n\n\n\nThe Quiet Politics of File Formats\n\n\n\ninfrastructure\n\nstandards\n\n\n\nEXIF tags, JSON-LD, and the schemas no one reads do more governance work than most policy memos.\n\n\n\n\n\nApr 14, 2026\n\n3 min\n\n\n\n\n\n\nAuditors Without Power\n\n\n\naudit\n\ngovernance\n\n\n\nWhy the audit has become the dominant aesthetic of AI accountability — and what that obscures.\n\n\n\n\n\nFeb 02, 2026\n\n1 min\n\n\n\n\n\n\nOn the Disappearance of the Default\n\n\n\nnotes\n\n\n\nA short note on the politics of preselected options, and the long shadow they cast on consent.\n\n\n\n\n\nJan 09, 2026\n\n1 min\n\n\n\n\nNo matching items\n\nAll essays →"
   },
   {
     "objectID": "index.html#selected-work",
     "href": "index.html#selected-work",
     "title": "Sudhamshu Hosamane",
     "section": "Selected work",
-    "text": "Selected work\n\n\n2025\n\nHate Speech Campaigns in the 2016 Philippine Elections on Facebook\nSudhamshu Hosamane, Kiran Garimella · Proceedings of ICWSM ’25\n\n2024\n\nNavigating Hate Speech and Political Influence on Philippine Social Media\nPlenary talk · International Conference on Computational Social Science (IC2S2), Philadelphia\n\n2024\n\nPromoting Information Integrity in Minoritized Communities\nPanel · Knight Media Forum, Miami\n\n\n\nFull CV →"
+    "text": "Selected work\n\n\n2026\n\nEvaluating Peer Fact-Checking on WhatsApp\nSudhamshu Hosamane, Kriti Sharma, Tanvi Goyal, Molly Offer-Westort, Kiran Garimella · Proceedings of CHI ’26\n\n2025\n\nHate Speech Campaigns in the 2016 Philippine Elections on Facebook\nSudhamshu Hosamane, Kiran Garimella · Proceedings of ICWSM ’25\n\n\n\nFull CV →"
   },
   {
     "objectID": "writing/file-formats.html",

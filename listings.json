@@ -10,7 +10,6 @@
   {
     "listing": "/index.html",
     "items": [
-      "/writing/index.html",
       "/writing/file-formats.html",
       "/writing/auditors.html",
       "/writing/default.html"
