@@ -1,8 +1,8 @@
 ---
 title: "Sudhamshu Hosamane"
 subtitle: "Doctoral researcher at Rutgers studying how political talk — and political mistruths — travel through the encrypted, semi-private platforms that increasingly mediate it. My work joins computational social science to field experiments, with recent attention to hate-speech campaigns on Philippine Facebook and misinformation corrections on Indian WhatsApp."
-eyebrow: "Researcher · misinformation, platforms, political communication"
-pagetitle: "Sudhamshu Hosamane — Researcher, misinformation & political platforms"
+eyebrow: "Researcher · Technology and Society"
+pagetitle: "Sudhamshu Hosamane — Researcher, Technology and Society"
 include-in-header:
   - text: |
       <link rel="stylesheet" href="assets/creatures.css">
